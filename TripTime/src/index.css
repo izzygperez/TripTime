@@ -1,0 +1,9 @@
+:root {
+  --font-sigmar-one: 'Sigmar One', cursive;
+  --font-montserrat: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-montserrat);
+}
