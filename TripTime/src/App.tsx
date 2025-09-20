@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./page.module.css";
 
 function App() {
@@ -21,9 +22,9 @@ function App() {
 
       <main className={styles.cards}>
         {cards.map((card, i) => (
-          <a
+          <Link
             key={i}
-            href={`/destination/${card.slug}`}
+            to={`/destination/${card.slug}`}
             className={styles.card}
           >
             <img
@@ -34,7 +35,7 @@ function App() {
               className={styles.image}
             />
             <p className={styles.label}>{card.label}</p>
-          </a>
+          </Link>
         ))}
       </main>
     </div>
