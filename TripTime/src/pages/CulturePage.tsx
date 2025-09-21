@@ -47,9 +47,9 @@ export default function CulturePage() {
         <div className={styles.dropdown}>
           <button className={styles.dropbtn}>Categories ⬇</button>
           <div className={styles.dropdownContent}>
-            <a href="/destination/culture">Culture</a>
-            <a href="/destination/eat-drink">Eat & Drink</a>
-            <a href="/destination/activities">Activities</a>
+            <a href="/destination/culture" className={styles.dd1}>Culture</a>
+            <a href="/destination/eat-drink" className={styles.dd2}>Eat & Drink</a>
+            <a href="/destination/activities" className={styles.dd3}>Activities</a>
           </div>
         </div>
       </header>

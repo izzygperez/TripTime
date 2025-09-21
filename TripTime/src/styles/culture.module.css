@@ -1,5 +1,55 @@
+html {
+  background-color: #fcf3e3;
+}
+
+title {
+  font-size: 3rem;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.home {
+  border: none;
+  background-color:#fcf3e3;
+  border-radius: 100%;
+  position: absolute;
+  right: 90%;
+  padding: 1%;
+  font-size: large;
+}
+
+.home:active{
+  background-color:#ffb979;
+}
+
+h1 {
+  font-family: var(--font-sigmar-one);
+  color: #013d5a;
+  text-align: center;
+}
+
+h2 {
+  font-family: var(--font-sigmar-one);
+  color: #013d5a;
+  text-align: center;
+}
+
+p {
+  font-family: var(--font-montserrat);
+}
+
 .placeType {
   color: #fcf3e3;
+  text-align: center;
 }
 
 .dropbtn {
@@ -52,12 +102,13 @@
   border-radius: 0 0 25px 25px;
 }
 
-.article {
+article {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   gap: 2rem;
-  height: 75vh;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 .locations {
@@ -66,7 +117,6 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-  flex: 1;
 }
 
 .address {
@@ -84,7 +134,7 @@
   background-color: #ffb979;
 }
 
-.span {
+span {
   font-weight: bold;
 }
 
@@ -94,10 +144,8 @@
 }
 
 .imageFeed {
-  flex: 2;
-  min-width: 0;
-  max-height: 75vh;
   overflow-y: auto;
+  flex: 1;
 }
 
 .imgGrid {
@@ -114,13 +162,14 @@
   position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
+  overflow: hidden;
+  text-align: center;
 }
 
 .notes {
   background-color: #bde3ce;
   border-radius: 25px;
   padding: 30px;
-  flex: 1;
 }
 
 @media (max-width: 768px) {
@@ -129,7 +178,7 @@
     margin-top: 2%;
     margin-bottom: 2%;
   }
-  .span {
+  span {
     font-size: xx-small;
   }
   .imgGrid {
@@ -138,7 +187,18 @@
 }
 
 @media (max-width: 500px) {
-  .article {
+  header {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .home {
+    position: static;
+    transform: none;
+    padding: 2%;
+  }
+
+  article {
     flex-direction: column;
     height: auto;
   }
