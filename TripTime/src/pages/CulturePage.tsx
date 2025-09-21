@@ -84,18 +84,17 @@ export default function CulturePage() {
         </section>
         <section className={styles.imageFeed}>
           <div className={styles.imgGrid}>
-            <dialog ref={dialogRef} className="modal" >
+            <dialog ref={dialogRef} className={styles.modal} >
               <div>
                 {activeImage && (
                   <img src={activeImage} alt="Older Gyeongbokgung Image" width={400} height={400}/>
                 )}
               </div>
               <button 
-                className="closeBtn"
+                className={styles.closeBtn}
                 onClick={closeModal}
               >
                 X
-                <span className="sr-only">Close</span>
               </button>
             </dialog>
             <div className={styles.pic}>
