@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { X } from "lucide-react";
 import styles from "../styles/culture.module.css";
 
 export default function CulturePage() {
@@ -10,6 +9,7 @@ export default function CulturePage() {
 
   useEffect(() => {
     if (!activeImage) return;
+    console.log("active image: ", activeImage)
 
     dialogRef.current?.showModal();
     document.body.style.overflow = "hidden";
@@ -28,28 +28,35 @@ export default function CulturePage() {
 
   // Example gallery images
   const galleryImages = [
-    "/images/gbg_history.jpg",
-    "/images/gbg_inside.jpg",
-    "/images/gbg_show.jpg",
-    "/images/GBG.jpg",
-    "/images/gbg(1).jpg",
-    "/images/gyeongbokgung.jpg",
+    "/images/culture/gbg_history.jpg",
+    "/images/culture/gbg_inside.jpg",
+    "/images/culture/gbg_show.jpg",
+    "/images/culture/GBG.jpg",
+    "/images/culture/gbg(1).jpg",
+    "/images/culture/gyeongbokgung.jpg",
   ];
 
   return (
     <main>
-      <header className={styles.header}>
-        <button className={styles.home} onClick={() => navigate("/")}>
-          🏠
+      <header>
+        <button className="home">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi-house-door" viewBox="0 0 16 16">
+            <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
+          </svg>
         </button>
-        <h1 className={styles.title}>TripTime</h1>
+        <h1 className="title">TripTime</h1>
 
         <div className={styles.dropdown}>
-          <button className={styles.dropbtn}>Categories ⬇</button>
+          <button className={styles.dropbtn}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#013d5a" className="bi-caret-down-fill" viewBox="0 0 16 16">
+              <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+            </svg>  
+            Categories
+          </button>
           <div className={styles.dropdownContent}>
-            <a href="/destination/culture">Culture</a>
-            <a href="/destination/eat-drink">Eat & Drink</a>
-            <a href="/destination/activities">Activities</a>
+            <a className={styles.dd1} href="/destination/culture">Culture</a>
+            <a className={styles.dd2} href="/destination/eat-drink">Eat & Drink</a>
+            <a className={styles.dd3} href="/destination/activities">Activities</a>
           </div>
         </div>
       </header>
@@ -58,55 +65,134 @@ export default function CulturePage() {
         <section className={styles.locations}>
           <h2 className={styles.placeType}>Historical Places</h2>
           <button className={styles.address}>
-            <span className={styles.addyName}>Gyeongbokgung</span>
-            <br />
+            <span className={styles.addyName}>Gyeongbokgung</span><br></br>
             <span className={styles.span}>161 Sajik-ro, Jongno-gu, Seoul</span>
           </button>
           <button className={styles.address}>
-            <span className={styles.addyName}>Bukchon Hanok Village</span>
-            <br />
+            <span className={styles.addyName}>Bukchon Hanok Village</span><br></br>
             <span className={styles.span}>37 Gyedong-gil, Jongno-gu, Seoul</span>
-          </button>
-
+            </button>
           <h2 className={styles.placeType}>Cultural Landmarks</h2>
           <button className={styles.address}>
-            <span className={styles.addyName}>DMZ</span>
-            <br />
+            <span className={styles.addyName}>DMZ</span><br></br>
             <span className={styles.span}>???</span>
           </button>
           <button className={styles.address}>
-            <span className={styles.addyName}>Han River</span>
-            <br />
+            <span className={styles.addyName}>Han River</span><br></br>
             <span className={styles.span}>330 Yeouidong-ro, Yeongdeungpo-gu, Seoul</span>
           </button>
         </section>
-
         <section className={styles.imageFeed}>
           <div className={styles.imgGrid}>
-            <dialog ref={dialogRef} className={styles.modal}>
-              {activeImage && (
-                <div className={styles.modalContent}>
-                  <img src={activeImage} alt="Selected" className={styles.modalImage} />
-                  <button className={styles.modalClose} onClick={closeModal}>
-                    <X />
-                  </button>
-                </div>
-              )}
-            </dialog>
-
-            {galleryImages.map((img, idx) => (
-              <div className={styles.pic} key={idx}>
-                <button onClick={() => setActiveImage(img)}>
-                  <img src={img} alt={`Gallery ${idx}`} className={styles.galleryImg} />
-                </button>
+            <dialog ref={dialogRef} className="modal" >
+              <div>
+                {activeImage && (
+                  <img src={activeImage} alt="Older Gyeongbokgung Image" width={400} height={400}/>
+                )}
               </div>
-            ))}
+              <button 
+                className="closeBtn"
+                onClick={closeModal}
+              >
+                X
+                <span className="sr-only">Close</span>
+              </button>
+            </dialog>
+            <div className={styles.pic}>
+              <button onClick={() => setActiveImage("/images/culture/gbg_history.jpg")}>
+                <img src="/images/culture/gbg_history.jpg" alt="Older Gyeongbokgung Image" />
+              </button>
+            </div>
+            <div className={styles.pic}>
+              <button onClick={() => setActiveImage("/images/culture/gbg_inside.jpg")}>
+                <img src="/images/culture/gbg_inside.jpg" alt="Gyeongbokgung Building" />
+              </button>
+            </div>
+            <div className={styles.pic}>
+              <button onClick={() => setActiveImage("/images/culture/gbg_show.jpg")}>
+                <img src="/images/culture/gbg_show.jpg" alt="Gyeongbokgung Parade" />
+              </button>
+            </div>
+            <div className={styles.pic}>
+              <button onClick={() => setActiveImage("/images/culture/GBG.jpg")}>
+                <img src="/images/culture/GBG.jpg" alt="Gyeongbokgung at Night" />
+              </button>
+            </div>
+            <div className={styles.pic}>
+              <button onClick={() => setActiveImage("/images/culture/gbg(1).jpg")}>
+                <img src="/images/culture/gbg(1).jpg" alt="Gyeongbokgung with Snow" />
+              </button>
+            </div>
+            <div className={styles.pic}>
+              <button onClick={() => setActiveImage("/images/culture/gyeongbokgung.jpg")}>
+                <img src="/images/culture/gyeongbokgung.jpg" alt="Gyeongbokgung" />
+              </button>
+            </div>
+            <div className={styles.pic}>
+              <button onClick={() => setActiveImage("/images/culture/gbg_history.jpg")}>
+                <img src="/images/culture/gbg_history.jpg" alt="Older Gyeongbokgung Image" />
+              </button>
+            </div>
+            <div className={styles.pic}>
+              <button onClick={() => setActiveImage("/images/culture/gbg_inside.jpg")}>
+                <img src="/images/culture/gbg_inside.jpg" alt="Gyeongbokgung Building" />
+              </button>
+            </div>
+            <div className={styles.pic}>
+              <button onClick={() => setActiveImage("/images/culture/gbg_show.jpg")}>
+                <img src="/images/culture/gbg_show.jpg" alt="Gyeongbokgung Parade" />
+              </button>
+            </div>
+            <div className={styles.pic}>
+              <button onClick={() => setActiveImage("/images/culture/GBG.jpg")}>
+                <img src="/images/culture/GBG.jpg" alt="Gyeongbokgung at Night" />
+              </button>
+            </div>
+            <div className={styles.pic}>
+              <button onClick={() => setActiveImage("/images/culture/gbg(1).jpg")}>
+                <img src="/images/culture/gbg(1).jpg" alt="Gyeongbokgung with Snow" />
+              </button>
+            </div>
+            <div className={styles.pic}>
+              <button onClick={() => setActiveImage("/images/culture/gyeongbokgung.jpg")}>
+                <img src="/images/culture/gyeongbokgung.jpg" alt="Gyeongbokgung" />
+              </button>
+            </div>
+            <div className={styles.pic}>
+              <button onClick={() => setActiveImage("/images/culture/gbg_history.jpg")}>
+                <img src="/images/culture/gbg_history.jpg" alt="Older Gyeongbokgung Image" />
+              </button>
+            </div>
+            <div className={styles.pic}>
+              <button onClick={() => setActiveImage("/images/culture/gbg_inside.jpg")}>
+                <img src="/images/culture/gbg_inside.jpg" alt="Gyeongbokgung Building" />
+              </button>
+            </div>
+            <div className={styles.pic}>
+              <button onClick={() => setActiveImage("/images/culture/gbg_show.jpg")}>
+                <img src="/images/culture/gbg_show.jpg" alt="Gyeongbokgung Parade" />
+              </button>
+            </div>
+            <div className={styles.pic}>
+              <button onClick={() => setActiveImage("/images/culture/GBG.jpg")}>
+                <img src="/images/culture/GBG.jpg" alt="Gyeongbokgung at Night" />
+              </button>
+            </div>
+            <div className={styles.pic}>
+              <button onClick={() => setActiveImage("/images/culture/gbg(1).jpg")}>
+                <img src="/images/culture/gbg(1).jpg" alt="Gyeongbokgung with Snow" />
+              </button>
+            </div>
+            <div className={styles.pic}>
+              <button onClick={() => setActiveImage("/images/culture/gyeongbokgung.jpg")}>
+                <img src="/images/culture/gyeongbokgung.jpg" alt="Gyeongbokgung" />
+              </button>
+            </div>
           </div>
         </section>
-
         <section className={styles.notes}>
           <h2>Notes</h2>
-          <p>Add interesting facts or history here.</p>
+          <p>IDK SOMETHING</p>
         </section>
       </article>
     </main>
