@@ -44,21 +44,12 @@ export default function CulturePage() {
             <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
           </svg>
         </button>
-        <h1 className="title">TripTime</h1>
-
-        <div className={styles.dropdown}>
-          <button className={styles.dropbtn}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#013d5a" className="bi-caret-down-fill" viewBox="0 0 16 16">
-              <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-            </svg>  
-            Categories
-          </button>
-          <div className={styles.dropdownContent}>
-            <a className={styles.dd1} href="/destination/culture">Culture</a>
-            <a className={styles.dd2} href="/destination/eat-drink">Eat & Drink</a>
-            <a className={styles.dd3} href="/destination/activities">Activities</a>
-          </div>
-        </div>
+        <h1 className={styles.title}>TripTime</h1>
+        <select className={styles.dropbtn} onChange={(e) => {window.location.href = e.target.value;}}>
+          <option value="/destination/culture">Culture</option>
+          <option value="/destination/eat-drink">Eat & Drink</option>
+          <option value="/destination/activities">Activities</option>
+        </select>
       </header>
 
       <article className={styles.article}>
