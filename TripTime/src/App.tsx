@@ -4,9 +4,9 @@ import styles from "./page.module.css";
 
 function App() {
   const cards = [
-    { src: "/images/gbg_show.jpg", label: "Culture", slug: "culture" },
-    { src: "/images/hanPark.jpg", label: "Eat & Drink", slug: "eat-drink" },
-    { src: "/images/GBG.jpg", label: "Activities", slug: "activities" },
+    { src: "/images/culture/gbg_show.jpg", label: "Culture", slug: "culture" },
+    { src: "/images/culture/hanPark.jpg", label: "Eat & Drink", slug: "eat-drink" },
+    { src: "/images/culture/GBG.jpg", label: "Activities", slug: "activities" },
   ];
 
   return (
