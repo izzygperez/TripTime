@@ -43,15 +43,11 @@ export default function CulturePage() {
           🏠
         </button>
         <h1 className={styles.title}>TripTime</h1>
-
-        <div className={styles.dropdown}>
-          <button className={styles.dropbtn}>Categories ⬇</button>
-          <div className={styles.dropdownContent}>
-            <a href="/destination/culture">Culture</a>
-            <a href="/destination/eat-drink">Eat & Drink</a>
-            <a href="/destination/activities">Activities</a>
-          </div>
-        </div>
+        <select className={styles.dropbtn} onChange={(e) => {window.location.href = e.target.value;}}>
+          <option value="/destination/culture">Culture</option>
+          <option value="/destination/eat-drink">Eat & Drink</option>
+          <option value="/destination/activities">Activities</option>
+        </select>
       </header>
 
       <article className={styles.article}>

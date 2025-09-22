@@ -13,7 +13,7 @@ function App() {
     <div className={styles.page}>
       <header className={styles.header}>
         <h1 className={styles.title}>TripTime</h1>
-        <select className={styles.dropdown}>
+        <select className={styles.dropbtn}>
           <option>Seoul, South Korea</option>
           <option>Tokyo, Japan</option>
           <option>Paris, France</option>
