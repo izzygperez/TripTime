@@ -8,6 +8,7 @@ export default function CulturePage() {
   const [activeImage, setActiveImage] = useState<string>();
   const navigate = useNavigate();
   const [activeLocation, setActiveLocation] = useState<string | null>(null);
+  const [active, setActive] = useState<string | null>(null);
 
   useEffect(() => {
     if (!activeImage) return;
@@ -26,6 +27,10 @@ export default function CulturePage() {
     setActiveImage(undefined);
     document.body.style.overflow = "";
   }
+
+  const handleClick = (place: string) => {
+    setActive(place);
+  };
 
   // Example gallery images
   const galleryImages = [
@@ -67,7 +72,7 @@ export default function CulturePage() {
     HanRiver: [
       { type: "bullet", content: "Famous spot for Korean media" },
       { type: "bullet", content: "Boat tours, cafes, bike rentals!!" },
-      { type: "type", content: "First Time Tips" },
+      { type: "text", content: "First Time Tips" },
       { type: "bullet", content: "Check for special events for photo ops" },
       { type: "bullet", content: "Have a little picnic with food from nearby convenience stores or fast food spots" },
     ],
@@ -90,24 +95,44 @@ export default function CulturePage() {
       <article className={styles.article}>
         <section className={styles.locations}>
           <h2 className={styles.placeType}>Historical Places</h2>
-          <button className={styles.address} onClick={() => setActiveLocation("Gyeongbokgung")}>
+          <button 
+          className={`${styles.address} ${active === "gyeongbokgung" ? styles.active : ""}`} 
+          onClick={() => {
+            setActive("gyeongbokgung");
+            setActiveLocation("Gyeongbokgung");
+          }}>
             <span className={styles.addyName}>Gyeongbokgung</span>
             <br />
             <span className={styles.span}>161 Sajik-ro, Jongno-gu, Seoul</span>
           </button>
-          <button className={styles.address} onClick={() => setActiveLocation("BukchonHanokVillage")}>
+          <button 
+          className={`${styles.address} ${active === "bukchon" ? styles.active : ""}`} 
+          onClick={() => {
+            setActive("bukchon");
+            setActiveLocation("BukchonHanokVillage");
+          }}>
             <span className={styles.addyName}>Bukchon Hanok Village</span>
             <br />
             <span className={styles.span}>37 Gyedong-gil, Jongno-gu, Seoul</span>
           </button>
 
           <h2 className={styles.placeType}>Cultural Landmarks</h2>
-          <button className={styles.address} onClick={() => setActiveLocation("DMZ")}>
+          <button 
+          className={`${styles.address} ${active === "dmz" ? styles.active : ""}`} 
+          onClick={() => {
+            setActive("dmz");
+            setActiveLocation("DMZ");
+          }}>
             <span className={styles.addyName}>DMZ</span>
             <br />
             <span className={styles.span}>Bus Tour Only</span>
           </button>
-          <button className={styles.address} onClick={() => setActiveLocation("HanRiver")}>
+          <button 
+          className={`${styles.address} ${active === "hanriver" ? styles.active : ""}`} 
+          onClick={() => {
+            setActive("hanriver");
+            setActiveLocation("HanRiver");
+          }}>
             <span className={styles.addyName}>Han River</span>
             <br />
             <span className={styles.span}>330 Yeouidong-ro, Yeongdeungpo-gu, Seoul</span>

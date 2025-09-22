@@ -97,6 +97,17 @@ article {
   background-color: #ffb979;
 }
 
+.active {
+  background-color: #ffb979;
+  border: none;
+  border-radius: 25px;
+  padding: 16px;
+  font-family: var(--font-montserrat, sans-serif);
+  color: #013d5a;
+  margin-bottom: 5%;
+  text-align: left;
+}
+
 span {
   font-weight: bold;
 }
