@@ -133,6 +133,18 @@ span {
   background-color: #bde3ce;
   border-radius: 25px;
   padding: 30px;
+  width: 25%;
+}
+
+li {
+  font-weight: normal;
+  font-family: var(--font-montserrat);
+  margin: 2%;
+}
+
+.notes p {
+  font-size: large;
+  color: #013d5a;
 }
 
 @media (max-width: 768px) {
