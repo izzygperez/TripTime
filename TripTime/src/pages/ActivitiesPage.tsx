@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import styles from "../styles/culture.module.css";
+import styles from "../styles/activities.module.css";
 
-export default function CulturePage() {
+export default function ActivitiesPage() {
   const dialogRef = useRef<HTMLDialogElement | null>(null);
   const [activeImage, setActiveImage] = useState<string>();
   const navigate = useNavigate();
