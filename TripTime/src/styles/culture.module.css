@@ -234,9 +234,9 @@ li {
 }
 
 .closeBtn {
-  position: relative;
-  top: -12px;
-  left: -12px;
+  position: absolute;
+  top: -15px;
+  left: -15px;
   width: 32px;
   height: 32px;
   border: none;

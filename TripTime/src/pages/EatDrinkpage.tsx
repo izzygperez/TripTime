@@ -141,14 +141,14 @@ export default function CulturePage() {
         <section className={styles.imageFeed}>
           <div className={styles.imgGrid}>
             <dialog ref={dialogRef} className={styles.modal}>
-              {activeImage && (
-                <div className={styles.modalContent}>
-                  <img src={activeImage} alt="Selected" className={styles.modalImage} />
-                  <button className={styles.modalClose} onClick={closeModal}>
-                    X
-                  </button>
-                </div>
-              )}
+              <div>
+                {activeImage && (
+                  <img src={activeImage} alt="Selected" />
+                )}
+              </div>
+              <button className={styles.closeBtn} onClick={closeModal}>
+                X
+              </button>
             </dialog>
 
             {galleryImages.map((img, idx) => (
