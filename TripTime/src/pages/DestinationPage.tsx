@@ -2,7 +2,36 @@ import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../styles/culture.module.css";
 
-export default function DestinationPage() {
+const GALLERIES: Record<string, string[]> = {
+  Gyeongbokgung: [
+    "/images/culture/gbg_history.jpg",
+    "/images/culture/gbg_inside.jpg",
+    "/images/culture/gbg_show.jpg",
+    "/images/culture/GBG.jpg",
+    "/images/culture/gbg(1).jpg",
+    "/images/culture/gyeongbokgung.jpg",
+  ],
+  BukchonHanokVillage: [
+    "/images/culture/bHanokVillage.jpg",
+    "/images/culture/BHV.jpg",
+    "/images/culture/bhv(1).jpg",
+    "/images/culture/Bukchon.jpg",
+    "/images/culture/bukchon(1).jpg",
+  ],
+  DMZ: [
+    "/images/culture/demilitarized-zone.jpg",
+    "/images/culture/DMZ_map.png",
+    "/images/culture/dmz.jpg",
+  ],
+  HanRiver: [
+    "/images/culture/Hangang.jpg",
+    "/images/culture/hanPark.jpg",
+    "/images/culture/hanRiver.jpg",
+    "/images/culture/HanRiver(1).jpg",
+  ],
+};
+
+export default function Page() {
   const dialogRef = useRef<HTMLDialogElement | null>(null);
   const [activeImage, setActiveImage] = useState<string>();
   const navigate = useNavigate();
@@ -13,13 +42,18 @@ export default function DestinationPage() {
     if (!activeImage) return;
 
     dialogRef.current?.showModal();
-    document.body.style.overflow = "hidden";
-
     dialogRef.current?.addEventListener("close", closeModal);
+
     return () => {
       dialogRef.current?.removeEventListener("close", closeModal);
     };
   }, [activeImage]);
+
+  useEffect(() => {
+    setActiveImage(undefined);
+  }, [activeLocation]);
+
+  const galleryImages = activeLocation ? GALLERIES[activeLocation] || [] : [];
 
   function closeModal() {
     dialogRef.current?.close();
@@ -30,16 +64,6 @@ export default function DestinationPage() {
   const handleClick = (place: string) => {
     setActive(place);
   };
-
-  // Example gallery images
-  const galleryImages = [
-    "/images/gbg_history.jpg",
-    "/images/gbg_inside.jpg",
-    "/images/gbg_show.jpg",
-    "/images/GBG.jpg",
-    "/images/gbg(1).jpg",
-    "/images/gyeongbokgung.jpg",
-  ];
 
   const notes: Record<string,{ type: "text" | "bullet"; content: string }[]> = {
     Gyeongbokgung: [
