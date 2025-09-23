@@ -65,6 +65,7 @@ export default function Page() {
     setActive(place);
   };
 
+
   const notes: Record<string,{ type: "text" | "bullet"; content: string }[]> = {
     Gyeongbokgung: [
       { type: "bullet", content: "Lots of hanbok rental options nearby" },
@@ -108,7 +109,7 @@ export default function Page() {
           🏠
         </button>
         <h1 className={styles.title}>TripTime</h1>
-        <select className={styles.dropbtn} onChange={(e) => {window.location.href = e.target.value;}}>
+        <select className={styles.dropbtn} onChange={(e) => navigate(e.target.value)}>
           <option value="/destination/culture">Culture</option>
           <option value="/destination/eat-drink">Eat & Drink</option>
           <option value="/destination/activities">Activities</option>
