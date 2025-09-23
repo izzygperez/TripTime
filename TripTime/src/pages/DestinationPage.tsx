@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { X } from "lucide-react";
 import styles from "../styles/culture.module.css";
 
 export default function CulturePage() {
@@ -65,7 +64,7 @@ export default function CulturePage() {
       { type: "bullet", content: "Lots of different options to book a bus tour" },
       { type: "bullet", content: "Museum has a cafe inside" },
       { type: "bullet", content: "Souvenir stops throughout tour" },
-      { type: "type", content: "First Time Tips" },
+      { type: "text", content: "First Time Tips" },
       { type: "bullet", content: "Bring identification and be respectful to soldiers" },
       { type: "bullet", content: "Brush up on North and South Korean history" },
     ],
@@ -143,10 +142,10 @@ export default function CulturePage() {
           <div className={styles.imgGrid}>
             <dialog ref={dialogRef} className={styles.modal}>
               {activeImage && (
-                <div className={styles.modalContent}>
-                  <img src={activeImage} alt="Selected" className={styles.modalImage} />
-                  <button className={styles.modalClose} onClick={closeModal}>
-                    <X />
+                <div>
+                  <img src={activeImage} alt="Selected" />
+                  <button className={styles.closeBtn} onClick={closeModal}>
+                    X
                   </button>
                 </div>
               )}
