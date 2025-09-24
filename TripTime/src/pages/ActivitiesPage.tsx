@@ -177,7 +177,7 @@ export default function CulturePage() {
             )}
           </div>
         ) : (
-          <p>Select a location to see details.</p>
+          <p>Select location to see details.</p>
         )}
         </section>
       </article>

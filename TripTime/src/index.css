@@ -15,4 +15,8 @@ html.is-spatial {
   background-color: transparent;
   --xr-background-material: transparent;
   height: 100dvh;
+
+  .name {
+    --xr-back: 50;
+  }
 }

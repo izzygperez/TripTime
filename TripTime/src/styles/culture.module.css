@@ -2,11 +2,11 @@ html {
   background-color: #fcf3e3;
 }
 
-.title {
+/* .title {
   font-size: 4rem;
   margin-top: 2%;
   margin-bottom: 2%;
-}
+} */
 
 header {
   display: flex;

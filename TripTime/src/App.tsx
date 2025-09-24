@@ -20,7 +20,7 @@ function App() {
   return (
     <div className={styles.page}>
       <header className={styles.header}>
-        <h1 className={styles.title}>TripTime</h1>
+        <h1 className={`${styles.title} name`} enable-xr >TripTime</h1>
         <select className={styles.dropbtn}>
           <option>Seoul, South Korea</option>
           <option>Tokyo, Japan</option>

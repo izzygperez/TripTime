@@ -66,45 +66,10 @@
   transform: translateY(-2px);
 }
 
-
-
 @keyframes shine {
   0% { background-position: -500px; }
   100% { background-position: 500px; }
 }
-
-/* Glass-style dropdown */
-/* .dropdown {
-  padding: 10px 16px;
-  border-radius: 20px;
-  border: none;
-  background: rgba(255,255,255,0.3);
-  backdrop-filter: blur(8px);
-  font-size: 1rem;
-  font-weight: 500;
-  color: #062f4f;
-  cursor: pointer;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-  position: relative;
-  appearance: none;
-  padding-right: 32px;
-  transition: all 0.25s ease;
-}
-
-.dropdown:hover {
-  background: rgba(255,255,255,0.5);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
-}
-
-.dropdown::after {
-  content: '▾';
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  color: #062f4f;
-} */
 
 .dropbtn {
   appearance: none;

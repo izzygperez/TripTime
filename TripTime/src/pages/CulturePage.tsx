@@ -28,9 +28,7 @@ export default function CulturePage() {
     document.body.style.overflow = "";
   }
 
-  const handleClick = (place: string) => {
-    setActive(place);
-  };
+  console.log("CulturePage mounted");
 
   // Example gallery images
   const galleryImages = [
@@ -84,7 +82,7 @@ export default function CulturePage() {
         <button className={styles.home} onClick={() => navigate("/")}>
           🏠
         </button>
-        <h1 className={styles.title}>TripTime</h1>
+        <h1 className="name" enable-xr >TripTime</h1>
         <select className={styles.dropbtn} onChange={(e) => {window.location.href = e.target.value;}}>
           <option value="/destination/culture">Culture</option>
           <option value="/destination/eat-drink">Eat & Drink</option>
@@ -93,7 +91,7 @@ export default function CulturePage() {
       </header>
 
       <article className={styles.article}>
-        <section className={styles.locations}>
+        <section className={`${styles.locations} places`} enable-xr >
           <h2 className={styles.placeType}>Historical Places</h2>
           <button 
           className={`${styles.address} ${active === "gyeongbokgung" ? styles.active : ""}`} 
