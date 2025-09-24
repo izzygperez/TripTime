@@ -3,31 +3,37 @@ import { useNavigate } from "react-router-dom";
 import styles from "../styles/activities.module.css";
 
 const GALLERIES: Record<string, string[]> = {
-  Gyeongbokgung: [
-    "/images/culture/gbg_history.jpg",
-    "/images/culture/gbg_inside.jpg",
-    "/images/culture/gbg_show.jpg",
-    "/images/culture/GBG.jpg",
-    "/images/culture/gbg(1).jpg",
-    "/images/culture/gyeongbokgung.jpg",
+  Sparex: [
+    "/images/activities/sparex.png",
+    "/images/activities/sparex2.jpg",
+    "/images/activities/sparex3.png",
+    "/images/activities/sparex4.png",
+    "/images/activities/sparex5.jpg",
+    "/images/activities/sparex6.png",
   ],
-  BukchonHanokVillage: [
-    "/images/culture/bHanokVillage.jpg",
-    "/images/culture/BHV.jpg",
-    "/images/culture/bhv(1).jpg",
-    "/images/culture/Bukchon.jpg",
-    "/images/culture/bukchon(1).jpg",
+  OutdoorLibrary: [
+    "/images/activities/outdoorlibrary.jpg",
+    "/images/activities/outdoorlibrary2.jpg",
+    "/images/activities/outdoorlibrary3.jpg",
+    "/images/activities/outdoorlibrary4.jpg",
+    "/images/activities/outdoorlibrary5.jpg",
+    "/images/activities/outdoorlibrary6.jpg",
   ],
-  DMZ: [
-    "/images/culture/demilitarized-zone.jpg",
-    "/images/culture/DMZ_map.png",
-    "/images/culture/dmz.jpg",
+  LanternFestival: [
+    "/images/activities/LanternFestival.jpg",
+    "/images/activities/LanternFestival2.jpg",
+    "/images/activities/LanternFestival3.jpg",
+    "/images/activities/LanternFestival4.jpg",
+    "/images/activities/LanternFestival5.jpg",
+    "/images/activities/LanternFestival6.jpg",
   ],
-  HanRiver: [
-    "/images/culture/Hangang.jpg",
-    "/images/culture/hanPark.jpg",
-    "/images/culture/hanRiver.jpg",
-    "/images/culture/HanRiver(1).jpg",
+  CherryBlossom: [
+    "/images/activities/CherryBlossom.jpg",
+    "/images/activities/CherryBlossom2.jpg",
+    "/images/activities/CherryBlossom3.jpg",
+    "/images/activities/CherryBlossom4.jpg",
+    "/images/activities/CherryBlossom5.jpg",
+    "/images/activities/CherryBlossom6.jpg",
   ],
 };
 
@@ -67,7 +73,7 @@ export default function ActivitiesPage() {
 
 
   const notes: Record<string,{ type: "text" | "bullet"; content: string }[]> = {
-    Gyeongbokgung: [
+    Sparex: [
       { type: "bullet", content: "Lots of hanbok rental options nearby" },
       { type: "bullet", content: "Scheduled ceremonies throughout the day" },
       { type: "text", content: "First Time Tips" },
@@ -78,14 +84,14 @@ export default function ActivitiesPage() {
       { type: "bullet", content: "Tons of photo op places since it’s a big landmark" },
       { type: "bullet", content: "Check for special events to see the palace at night" },
     ],
-    BukchonHanokVillage: [
+    OutdoorLibrary: [
       { type: "bullet", content: "Very picturesque depending on the season" },
       { type: "bullet", content: "Small shops with handmade and traditional items" },
       { type: "text", content: "First Time Tips" },
       { type: "bullet", content: "Be respectful of the residents in the area" },
       { type: "bullet", content: "Go early to avoid crowds" },
     ],
-    DMZ: [
+    LanternFestival: [
       { type: "bullet", content: "Lots of different options to book a bus tour" },
       { type: "bullet", content: "Museum has a cafe inside" },
       { type: "bullet", content: "Souvenir stops throughout tour" },
@@ -93,7 +99,7 @@ export default function ActivitiesPage() {
       { type: "bullet", content: "Bring identification and be respectful to soldiers" },
       { type: "bullet", content: "Brush up on North and South Korean history" },
     ],
-    HanRiver: [
+    CherryBlossom: [
       { type: "bullet", content: "Famous spot for Korean media" },
       { type: "bullet", content: "Boat tours, cafes, bike rentals!!" },
       { type: "text", content: "First Time Tips" },
@@ -118,48 +124,48 @@ export default function ActivitiesPage() {
 
       <article className={styles.article}>
         <section className={styles.locations}>
-          <h2 className={styles.placeType}>Historical Places</h2>
+          <h2 className={styles.placeType}>Relaxing</h2>
           <button 
-          className={`${styles.address} ${active === "gyeongbokgung" ? styles.active : ""}`} 
+          className={`${styles.address} ${active === "sparex" ? styles.active : ""}`} 
           onClick={() => {
-            setActive("gyeongbokgung");
-            setActiveLocation("Gyeongbokgung");
+            setActive("sparex");
+            setActiveLocation("Sparex");
           }}>
-            <span className={styles.addyName}>Gyeongbokgung</span>
+            <span className={styles.addyName}>Sparex</span>
             <br />
-            <span className={styles.span}>161 Sajik-ro, Jongno-gu, Seoul</span>
+            <span className={styles.span}>18-21 Eulijiro 6(yuk)-ga Jung-gu, Seoul</span>
           </button>
           <button 
-          className={`${styles.address} ${active === "bukchon" ? styles.active : ""}`} 
+          className={`${styles.address} ${active === "outdoorlibrary" ? styles.active : ""}`} 
           onClick={() => {
-            setActive("bukchon");
-            setActiveLocation("BukchonHanokVillage");
+            setActive("outdoorlibrary");
+            setActiveLocation("OutdoorLibrary");
           }}>
-            <span className={styles.addyName}>Bukchon Hanok Village</span>
+            <span className={styles.addyName}>Outdoor Library</span>
             <br />
-            <span className={styles.span}>37 Gyedong-gil, Jongno-gu, Seoul</span>
+            <span className={styles.span}>Changsin-dong Jongno-gu, Seoul</span>
           </button>
 
-          <h2 className={styles.placeType}>Cultural Landmarks</h2>
+          <h2 className={styles.placeType}>Seasonal</h2>
           <button 
-          className={`${styles.address} ${active === "dmz" ? styles.active : ""}`} 
+          className={`${styles.address} ${active === "LanternFestival" ? styles.active : ""}`} 
           onClick={() => {
-            setActive("dmz");
-            setActiveLocation("DMZ");
+            setActive("lanternfestival");
+            setActiveLocation("LanternFestival");
           }}>
-            <span className={styles.addyName}>DMZ</span>
+            <span className={styles.addyName}>Lantern Festival</span>
             <br />
-            <span className={styles.span}>Bus Tour Only</span>
+            <span className={styles.span}>Changsin-dong Jongno-gu, Seoul</span>
           </button>
           <button 
-          className={`${styles.address} ${active === "hanriver" ? styles.active : ""}`} 
+          className={`${styles.address} ${active === "CherryBlossom" ? styles.active : ""}`} 
           onClick={() => {
-            setActive("hanriver");
-            setActiveLocation("HanRiver");
+            setActive("cherryblossom");
+            setActiveLocation("CherryBlossom");
           }}>
-            <span className={styles.addyName}>Han River</span>
+            <span className={styles.addyName}>Cherry Blossom Viewing</span>
             <br />
-            <span className={styles.span}>330 Yeouidong-ro, Yeongdeungpo-gu, Seoul</span>
+            <span className={styles.span}>8 Yeouido-dong Yeongdeungpo-gu, Seoul</span>
           </button>
         </section>
 

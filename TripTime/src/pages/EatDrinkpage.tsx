@@ -129,7 +129,7 @@ export default function EatDrinkPage() {
           }}>
             <span className={styles.addyName}>Cheongsudang</span>
             <br />
-            <span className={styles.span}>31-9 Donhwamun-ro 11na-gil, Jongno District, Seoul</span>
+            <span className={styles.span}>144 Ikseon-dong Jongno-gu, Seoul</span>
           </button>
           <button 
           className={`${styles.address} ${active === "clementine" ? styles.active : ""}`} 
@@ -139,7 +139,7 @@ export default function EatDrinkPage() {
           }}>
             <span className={styles.addyName}>Clementine</span>
             <br />
-            <span className={styles.span}>5-1 Seoulsup 2-gil, Seongdong-gu, Seoul</span>
+            <span className={styles.span}>685-490 Seongsu-dong, Seoul</span>
           </button>
 
           <h2 className={styles.placeType}>Restaurant</h2>
@@ -151,7 +151,7 @@ export default function EatDrinkPage() {
           }}>
             <span className={styles.addyName}>Ocheonjip</span>
             <br />
-            <span className={styles.span}>31-10 Donhwamun-ro 11na-gil, Ikseon-dong, Jongno District, Seoul</span>
+            <span className={styles.span}>128-3 Ikeon-dong Jogno-gu, Seoul</span>
           </button>
           <button 
           className={`${styles.address} ${active === "solsot" ? styles.active : ""}`} 
@@ -161,7 +161,7 @@ export default function EatDrinkPage() {
           }}>
             <span className={styles.addyName}>Solsot</span>
             <br />
-            <span className={styles.span}>35 Donggyo-ro 38-gil, Mapo-gu, Seoul</span>
+            <span className={styles.span}>390-42 Yeonnam-dong Mapo-gu, Seoul</span>
           </button>
         </section>
 
