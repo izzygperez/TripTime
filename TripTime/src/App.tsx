@@ -1,12 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./page.module.css";
+import gbgShow from "./assets/gbg_show.jpg";
+import hanPark from "./assets/hanPark.jpg";
+import gbg from "./assets/GBG.jpg";
 
 function App() {
+  // const cards = [
+  //   { src: "/images/gbg_show.jpg", label: "Culture", slug: "culture" },
+  //   { src: "/images/hanPark.jpg", label: "Eat & Drink", slug: "eat-drink" },
+  //   { src: "/images/GBG.jpg", label: "Activities", slug: "activities" },
+  // ];
   const cards = [
-    { src: "/images/gbg_show.jpg", label: "Culture", slug: "culture" },
-    { src: "/images/hanPark.jpg", label: "Eat & Drink", slug: "eat-drink" },
-    { src: "/images/GBG.jpg", label: "Activities", slug: "activities" },
+    { src: gbgShow, label: "Culture", slug: "culture" },
+    { src: hanPark, label: "Eat & Drink", slug: "eat-drink" },
+    { src: gbg, label: "Activities", slug: "activities" },
   ];
 
   return (
