@@ -16,7 +16,16 @@ html.is-spatial {
   --xr-background-material: transparent;
   height: 100dvh;
 
-  .name {
+  .dropdown {
+    --xr-back: 100;
+  }
+
+  .doors {
     --xr-back: 50;
+  }
+
+  .category {
+    position: relative;
+    --xr-back: 25;
   }
 }

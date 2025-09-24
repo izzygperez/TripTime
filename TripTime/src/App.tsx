@@ -20,15 +20,15 @@ function App() {
   return (
     <div className={styles.page}>
       <header className={styles.header}>
-        <h1 className={`${styles.title} name`} enable-xr >TripTime</h1>
-        <select className={styles.dropbtn}>
+        <h1 className={styles.title} >TripTime</h1>
+        <select className={`${styles.dropbtn} dropdown`} enable-xr >
           <option>Seoul, South Korea</option>
           <option>Tokyo, Japan</option>
           <option>Paris, France</option>
         </select>
       </header>
 
-      <main className={styles.cards}>
+      <main className={`${styles.cards} doors`} enable-xr >
         {cards.map((card, i) => (
           <Link
             key={i}
@@ -42,7 +42,7 @@ function App() {
               height={450}
               className={styles.image}
             />
-            <p className={styles.label}>{card.label}</p>
+            <p className={`${styles.label} category`} enable-xr >{card.label}</p>
           </Link>
         ))}
       </main>
