@@ -2,6 +2,35 @@ import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../styles/activities.module.css";
 
+const GALLERIES: Record<string, string[]> = {
+  Gyeongbokgung: [
+    "/images/culture/gbg_history.jpg",
+    "/images/culture/gbg_inside.jpg",
+    "/images/culture/gbg_show.jpg",
+    "/images/culture/GBG.jpg",
+    "/images/culture/gbg(1).jpg",
+    "/images/culture/gyeongbokgung.jpg",
+  ],
+  BukchonHanokVillage: [
+    "/images/culture/bHanokVillage.jpg",
+    "/images/culture/BHV.jpg",
+    "/images/culture/bhv(1).jpg",
+    "/images/culture/Bukchon.jpg",
+    "/images/culture/bukchon(1).jpg",
+  ],
+  DMZ: [
+    "/images/culture/demilitarized-zone.jpg",
+    "/images/culture/DMZ_map.png",
+    "/images/culture/dmz.jpg",
+  ],
+  HanRiver: [
+    "/images/culture/Hangang.jpg",
+    "/images/culture/hanPark.jpg",
+    "/images/culture/hanRiver.jpg",
+    "/images/culture/HanRiver(1).jpg",
+  ],
+};
+
 export default function ActivitiesPage() {
   const dialogRef = useRef<HTMLDialogElement | null>(null);
   const [activeImage, setActiveImage] = useState<string>();
@@ -13,13 +42,18 @@ export default function ActivitiesPage() {
     if (!activeImage) return;
 
     dialogRef.current?.showModal();
-    document.body.style.overflow = "hidden";
-
     dialogRef.current?.addEventListener("close", closeModal);
+
     return () => {
       dialogRef.current?.removeEventListener("close", closeModal);
     };
   }, [activeImage]);
+
+  useEffect(() => {
+    setActiveImage(undefined);
+  }, [activeLocation]);
+
+  const galleryImages = activeLocation ? GALLERIES[activeLocation] || [] : [];
 
   function closeModal() {
     dialogRef.current?.close();
@@ -31,15 +65,6 @@ export default function ActivitiesPage() {
     setActive(place);
   };
 
-  // Example gallery images
-  const galleryImages = [
-    "/images/gbg_history.jpg",
-    "/images/gbg_inside.jpg",
-    "/images/gbg_show.jpg",
-    "/images/GBG.jpg",
-    "/images/gbg(1).jpg",
-    "/images/gyeongbokgung.jpg",
-  ];
 
   const notes: Record<string,{ type: "text" | "bullet"; content: string }[]> = {
     Gyeongbokgung: [
@@ -83,8 +108,8 @@ export default function ActivitiesPage() {
         <button className={styles.home} onClick={() => navigate("/")}>
           🏠
         </button>
-        <h1 className={styles.title}>TripTime</h1>
-        <select className={styles.dropbtn} onChange={(e) => {window.location.href = e.target.value;}}>
+        <h1 className={styles.title}>Activity</h1>
+        <select className={styles.dropbtn} onChange={(e) => navigate(e.target.value)}>
           <option value="/destination/culture">Culture</option>
           <option value="/destination/eat-drink">Eat & Drink</option>
           <option value="/destination/activities">Activities</option>
@@ -141,14 +166,15 @@ export default function ActivitiesPage() {
         <section className={styles.imageFeed}>
           <div className={styles.imgGrid}>
             <dialog ref={dialogRef} className={styles.modal}>
+              <button className={styles.closeBtn} onClick={closeModal}>
+                X
+              </button>
               <div>
                 {activeImage && (
                   <img src={activeImage} alt="Selected" />
                 )}
               </div>
-              <button className={styles.closeBtn} onClick={closeModal}>
-                X
-              </button>
+              
             </dialog>
 
             {galleryImages.map((img, idx) => (

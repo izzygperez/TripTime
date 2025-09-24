@@ -2,6 +2,41 @@ import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../styles/eatDrink.module.css";
 
+const GALLERIES: Record<string, string[]> = {
+  Cheongsudang: [
+    "/images/eat-drink/CheongsudangBakery3.JPG",
+    "/images/eat-drink/cheongsudang4.jpg",
+    "/images/eat-drink/cheongsudangBakery.jpg",
+    "/images/eat-drink/cheongsudang7.jpg",
+    "/images/eat-drink/cheongsudang5.jpg",
+    "/images/eat-drink/cheongsudang3.png",
+  ],
+  Clementine: [
+    "/images/eat-drink/Clementine (1).jpg",
+    "/images/eat-drink/Clementine2.JPG",
+    "/images/eat-drink/clementine.jpeg",
+    "/images/eat-drink/clementine4.jpg",
+    "/images/eat-drink/clementine5.jpg",
+    "/images/eat-drink/clementine6.jpg",
+  ],
+  Ocheonjip: [
+    "/images/eat-drink/Ocheonjip.JPG",
+    "/images/eat-drink/Ocheonjip2.JPG",
+    "/images/eat-drink/Ocheonjip4.JPG",
+    "/images/eat-drink/ocheonjip3.jpeg",
+    "/images/eat-drink/ocheonjip5.jpg",
+    "/images/eat-drink/ocheonjip6.jpg",
+  ],
+  Solsot: [
+    "/images/eat-drink/solsot (1).jpg",
+    "/images/eat-drink/solsot3.jpg",
+    "/images/eat-drink/solsot4.jpg",
+    "/images/eat-drink/solsot5.jpeg",
+    "/images/eat-drink/solsot6.jpg",
+    "/images/eat-drink/solsot7.jpg",
+  ],
+};
+
 export default function EatDrinkPage() {
   const dialogRef = useRef<HTMLDialogElement | null>(null);
   const [activeImage, setActiveImage] = useState<string>();
@@ -13,13 +48,18 @@ export default function EatDrinkPage() {
     if (!activeImage) return;
 
     dialogRef.current?.showModal();
-    document.body.style.overflow = "hidden";
-
     dialogRef.current?.addEventListener("close", closeModal);
+
     return () => {
       dialogRef.current?.removeEventListener("close", closeModal);
     };
   }, [activeImage]);
+
+  useEffect(() => {
+    setActiveImage(undefined);
+  }, [activeLocation]);
+
+  const galleryImages = activeLocation ? GALLERIES[activeLocation] || [] : [];
 
   function closeModal() {
     dialogRef.current?.close();
@@ -31,18 +71,9 @@ export default function EatDrinkPage() {
     setActive(place);
   };
 
-  // Example gallery images
-  const galleryImages = [
-    "/images/gbg_history.jpg",
-    "/images/gbg_inside.jpg",
-    "/images/gbg_show.jpg",
-    "/images/GBG.jpg",
-    "/images/gbg(1).jpg",
-    "/images/gyeongbokgung.jpg",
-  ];
 
   const notes: Record<string,{ type: "text" | "bullet"; content: string }[]> = {
-    Gyeongbokgung: [
+    Cheongsudang: [
       { type: "bullet", content: "Lots of hanbok rental options nearby" },
       { type: "bullet", content: "Scheduled ceremonies throughout the day" },
       { type: "text", content: "First Time Tips" },
@@ -53,14 +84,14 @@ export default function EatDrinkPage() {
       { type: "bullet", content: "Tons of photo op places since it’s a big landmark" },
       { type: "bullet", content: "Check for special events to see the palace at night" },
     ],
-    BukchonHanokVillage: [
+    Clementine: [
       { type: "bullet", content: "Very picturesque depending on the season" },
       { type: "bullet", content: "Small shops with handmade and traditional items" },
       { type: "text", content: "First Time Tips" },
       { type: "bullet", content: "Be respectful of the residents in the area" },
       { type: "bullet", content: "Go early to avoid crowds" },
     ],
-    DMZ: [
+    Ocheonjip: [
       { type: "bullet", content: "Lots of different options to book a bus tour" },
       { type: "bullet", content: "Museum has a cafe inside" },
       { type: "bullet", content: "Souvenir stops throughout tour" },
@@ -68,7 +99,7 @@ export default function EatDrinkPage() {
       { type: "bullet", content: "Bring identification and be respectful to soldiers" },
       { type: "bullet", content: "Brush up on North and South Korean history" },
     ],
-    HanRiver: [
+    Solsot: [
       { type: "bullet", content: "Famous spot for Korean media" },
       { type: "bullet", content: "Boat tours, cafes, bike rentals!!" },
       { type: "text", content: "First Time Tips" },
@@ -83,8 +114,8 @@ export default function EatDrinkPage() {
         <button className={styles.home} onClick={() => navigate("/")}>
           🏠
         </button>
-        <h1 className={styles.title}>TripTime</h1>
-        <select className={styles.dropbtn} onChange={(e) => {window.location.href = e.target.value;}}>
+        <h1 className={styles.title}>Eat & Drink</h1>
+        <select className={styles.dropbtn} onChange={(e) => navigate(e.target.value)}>
           <option value="/destination/culture">Culture</option>
           <option value="/destination/eat-drink">Eat & Drink</option>
           <option value="/destination/activities">Activities</option>
@@ -93,62 +124,63 @@ export default function EatDrinkPage() {
 
       <article className={styles.article}>
         <section className={styles.locations}>
-          <h2 className={styles.placeType}>Historical Places</h2>
+          <h2 className={styles.placeType}>Cafe</h2>
           <button 
-          className={`${styles.address} ${active === "gyeongbokgung" ? styles.active : ""}`} 
+          className={`${styles.address} ${active === "cheongsudang" ? styles.active : ""}`} 
           onClick={() => {
-            setActive("gyeongbokgung");
-            setActiveLocation("Gyeongbokgung");
+            setActive("cheongsudang");
+            setActiveLocation("Cheongsudang");
           }}>
-            <span className={styles.addyName}>Gyeongbokgung</span>
+            <span className={styles.addyName}>Cheongsudang</span>
             <br />
-            <span className={styles.span}>161 Sajik-ro, Jongno-gu, Seoul</span>
+            <span className={styles.span}>31-9 Donhwamun-ro 11na-gil, Jongno District, Seoul</span>
           </button>
           <button 
-          className={`${styles.address} ${active === "bukchon" ? styles.active : ""}`} 
+          className={`${styles.address} ${active === "clementine" ? styles.active : ""}`} 
           onClick={() => {
-            setActive("bukchon");
-            setActiveLocation("BukchonHanokVillage");
+            setActive("clementine");
+            setActiveLocation("Clementine");
           }}>
-            <span className={styles.addyName}>Bukchon Hanok Village</span>
+            <span className={styles.addyName}>Clementine</span>
             <br />
-            <span className={styles.span}>37 Gyedong-gil, Jongno-gu, Seoul</span>
+            <span className={styles.span}>5-1 Seoulsup 2-gil, Seongdong-gu, Seoul</span>
           </button>
 
-          <h2 className={styles.placeType}>Cultural Landmarks</h2>
+          <h2 className={styles.placeType}>Restaurant</h2>
           <button 
-          className={`${styles.address} ${active === "dmz" ? styles.active : ""}`} 
+          className={`${styles.address} ${active === "ocheonjip" ? styles.active : ""}`} 
           onClick={() => {
-            setActive("dmz");
-            setActiveLocation("DMZ");
+            setActive("ocheonjip");
+            setActiveLocation("Ocheonjip");
           }}>
-            <span className={styles.addyName}>DMZ</span>
+            <span className={styles.addyName}>Ocheonjip</span>
             <br />
-            <span className={styles.span}>Bus Tour Only</span>
+            <span className={styles.span}>31-10 Donhwamun-ro 11na-gil, Ikseon-dong, Jongno District, Seoul</span>
           </button>
           <button 
-          className={`${styles.address} ${active === "hanriver" ? styles.active : ""}`} 
+          className={`${styles.address} ${active === "solsot" ? styles.active : ""}`} 
           onClick={() => {
-            setActive("hanriver");
-            setActiveLocation("HanRiver");
+            setActive("solsot");
+            setActiveLocation("Solsot");
           }}>
-            <span className={styles.addyName}>Han River</span>
+            <span className={styles.addyName}>Solsot</span>
             <br />
-            <span className={styles.span}>330 Yeouidong-ro, Yeongdeungpo-gu, Seoul</span>
+            <span className={styles.span}>35 Donggyo-ro 38-gil, Mapo-gu, Seoul</span>
           </button>
         </section>
 
         <section className={styles.imageFeed}>
           <div className={styles.imgGrid}>
             <dialog ref={dialogRef} className={styles.modal}>
+              <button className={styles.closeBtn} onClick={closeModal}>
+                X
+              </button>
               <div>
                 {activeImage && (
                   <img src={activeImage} alt="Selected" />
                 )}
               </div>
-              <button className={styles.closeBtn} onClick={closeModal}>
-                X
-              </button>
+              
             </dialog>
 
             {galleryImages.map((img, idx) => (
