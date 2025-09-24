@@ -108,7 +108,7 @@ export default function Page() {
         <button className={styles.home} onClick={() => navigate("/")}>
           🏠
         </button>
-        <h1 className={styles.title}>TripTime</h1>
+        <h1 className={styles.title}>Destination</h1>
         <select className={styles.dropbtn} onChange={(e) => navigate(e.target.value)}>
           <option value="/destination/culture">Culture</option>
           <option value="/destination/eat-drink">Eat & Drink</option>
