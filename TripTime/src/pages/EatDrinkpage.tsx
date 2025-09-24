@@ -74,37 +74,33 @@ export default function EatDrinkPage() {
 
   const notes: Record<string,{ type: "text" | "bullet"; content: string }[]> = {
     Cheongsudang: [
-      { type: "bullet", content: "Lots of hanbok rental options nearby" },
-      { type: "bullet", content: "Scheduled ceremonies throughout the day" },
-      { type: "text", content: "First Time Tips" },
-      {
-        type: "bullet",
-        content: "There’s an entry discount if you show up in hanbok!!",
-      },
-      { type: "bullet", content: "Tons of photo op places since it’s a big landmark" },
-      { type: "bullet", content: "Check for special events to see the palace at night" },
+      { type: "text", content: "Other Locations" },
+      { type: "bullet", content: "A lot of strawberries. promage cake: its a new menu promo with a lot of fresh strawberry juice" },
+      { type: "bullet", content: "Original egg souffle castela: Order-made dessert where you can enjoy warm souffles freshly baked at high temperatures for 20 minutes at the time as ordering by mixing fluffy cream cheese souffles and vanilla cream with nut honey" },
+      { type: "bullet", content: "Bonnie Bomb Mont Blanc: full of savory and sweet taste"},
+      { type: "bullet", content: "Stone drip coffee: Hand drip coffee extracted from three carefully selected top-quality beans using porous volcanic rocks"},
     ],
     Clementine: [
-      { type: "bullet", content: "Very picturesque depending on the season" },
-      { type: "bullet", content: "Small shops with handmade and traditional items" },
-      { type: "text", content: "First Time Tips" },
-      { type: "bullet", content: "Be respectful of the residents in the area" },
-      { type: "bullet", content: "Go early to avoid crowds" },
+      { type: "text", content: "Popular Menu Items" },
+      { type: "bullet", content: "Earl Grey Lemon Tart" },
+      { type: "bullet", content: "Earl Grey Gateau Cake" },
+      { type: "bullet", content: "Tiramisu Roll Cake" },
     ],
     Ocheonjip: [
-      { type: "bullet", content: "Lots of different options to book a bus tour" },
-      { type: "bullet", content: "Museum has a cafe inside" },
-      { type: "bullet", content: "Souvenir stops throughout tour" },
-      { type: "text", content: "First Time Tips" },
-      { type: "bullet", content: "Bring identification and be respectful to soldiers" },
-      { type: "bullet", content: "Brush up on North and South Korean history" },
+      { type: "text", content: "Popular Menu Itmes" },
+      { type: "bullet", content: "Black Angus Almoxim Sukiyaki: Traditional sukiyaki with sweet soy sauce base plus fresh vegetable and meat" },
+      { type: "bullet", content: "Hot Spring Bear Shabu: A hot spring rip with two cute white bears! There’s a bear on top of the miso broth!" },
+      { type: "bullet", content: "Hot Spring House Miso Shabu: Savory shabu shabu (choose rice or noodles) enjoyed with sauce in miso sauce pork bone broth" },
     ],
     Solsot: [
-      { type: "bullet", content: "Famous spot for Korean media" },
-      { type: "bullet", content: "Boat tours, cafes, bike rentals!!" },
-      { type: "text", content: "First Time Tips" },
-      { type: "bullet", content: "Check for special events for photo ops" },
-      { type: "bullet", content: "Have a little picnic with food from nearby convenience stores or fast food spots" },
+      { type: "text", content: "Other Locations" },
+      {
+        type: "bullet",
+        content: "Myeongdong, Hannam-dong, Yeonnam-dong, Sinsa, Gangnam, Seongsu",
+      },
+      { type: "text", content: "Popular Menu Items" },
+      { type: "bullet", content: "Steak Pot Rice: putting meat and yolk together and mixing it with rice in a light steak pot" },
+      { type: "bullet", content: "Sea Bream Cauldron Rice: premium pot rice with soft sea bream and scallops" },
     ],
   };
 
