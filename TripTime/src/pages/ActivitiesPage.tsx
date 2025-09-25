@@ -2,38 +2,68 @@ import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../styles/activities.module.css";
 
+/* Image imports for image feed on culture page */
+import sparex1 from "../assets/activities/sparex.png";
+import sparex2 from "../assets/activities/sparex2.jpg";
+import sparex3 from "../assets/activities/sparex3.png";
+import sparex4 from "../assets/activities/sparex4.png";
+import sparex5 from "../assets/activities/sparex5.jpg";
+import sparex6 from "../assets/activities/sparex6.png";
+
+import ol1 from "../assets/activities/outdoorlibrary.jpg";
+import ol2 from "../assets/activities/outdoorlibrary2.jpg";
+import ol3 from "../assets/activities/outdoorlibrary3.jpg";
+import ol4 from "../assets/activities/outdoorlibrary4.jpg";
+import ol5 from "../assets/activities/outdoorlibrary5.jpg";
+import ol6 from "../assets/activities/outdoorlibrary6.jpg";
+
+import lf1 from "../assets/activities/LanternFestival.jpg";
+import lf2 from "../assets/activities/LanternFestival2.jpg";
+import lf3 from "../assets/activities/LanternFestival3.jpg";
+import lf4 from "../assets/activities/LanternFestival4.jpg";
+import lf5 from "../assets/activities/LanternFestival5.jpg";
+import lf6 from "../assets/activities/LanternFestival6.jpg";
+
+import cb1 from "../assets/activities/CherryBlossom.jpg";
+import cb2 from "../assets/activities/CherryBlossom2.jpg";
+import cb3 from "../assets/activities/CherryBlossom3.jpg";
+import cb4 from "../assets/activities/CherryBlossom4.jpg";
+import cb5 from "../assets/activities/CherryBlossom5.jpg";
+import cb6 from "../assets/activities/CherryBlossom6.jpg";
+
+
 const GALLERIES: Record<string, string[]> = {
   Sparex: [
-    "/images/activities/sparex.png",
-    "/images/activities/sparex2.jpg",
-    "/images/activities/sparex3.png",
-    "/images/activities/sparex4.png",
-    "/images/activities/sparex5.jpg",
-    "/images/activities/sparex6.png",
+    sparex1,
+    sparex2,
+    sparex3,
+    sparex4,
+    sparex5,
+    sparex6,
   ],
   OutdoorLibrary: [
-    "/images/activities/outdoorlibrary.jpg",
-    "/images/activities/outdoorlibrary2.jpg",
-    "/images/activities/outdoorlibrary3.jpg",
-    "/images/activities/outdoorlibrary4.jpg",
-    "/images/activities/outdoorlibrary5.jpg",
-    "/images/activities/outdoorlibrary6.jpg",
+    ol1,
+    ol2,
+    ol3,
+    ol4,
+    ol5,
+    ol6,
   ],
   LanternFestival: [
-    "/images/activities/LanternFestival.jpg",
-    "/images/activities/LanternFestival2.jpg",
-    "/images/activities/LanternFestival3.jpg",
-    "/images/activities/LanternFestival4.jpg",
-    "/images/activities/LanternFestival5.jpg",
-    "/images/activities/LanternFestival6.jpg",
+    lf1,
+    lf2,
+    lf3,
+    lf4,
+    lf5,
+    lf6,
   ],
   CherryBlossom: [
-    "/images/activities/CherryBlossom.jpg",
-    "/images/activities/CherryBlossom2.jpg",
-    "/images/activities/CherryBlossom3.jpg",
-    "/images/activities/CherryBlossom4.jpg",
-    "/images/activities/CherryBlossom5.jpg",
-    "/images/activities/CherryBlossom6.jpg",
+    cb1,
+    cb2,
+    cb3,
+    cb4,
+    cb5,
+    cb6,
   ],
 };
 
@@ -66,11 +96,6 @@ export default function ActivitiesPage() {
     setActiveImage(undefined);
     document.body.style.overflow = "";
   }
-
-  const handleClick = (place: string) => {
-    setActive(place);
-  };
-
 
   const notes: Record<string,{ type: "text" | "bullet"; content: string }[]> = {
     Sparex: [

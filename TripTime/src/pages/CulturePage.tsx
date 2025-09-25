@@ -84,9 +84,6 @@ export default function CulturePage() {
     document.body.style.overflow = "";
   }
 
-  console.log("CulturePage mounted");
-
-
   const notes: Record<string,{ type: "text" | "bullet"; content: string }[]> = {
     Gyeongbokgung: [
       { type: "bullet", content: "Lots of hanbok rental options nearby" },
