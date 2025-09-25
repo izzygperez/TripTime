@@ -2,38 +2,66 @@ import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../styles/eatDrink.module.css";
 
+import cheongsudang1 from "../assets/eat-drink/CheongsudangBakery3.jpg";
+import cheongsudang2 from "../assets/eat-drink/cheongsudang4.jpg";
+import cheongsudang3 from "../assets/eat-drink/cheongsudangBakery.jpg";
+import cheongsudang4 from "../assets/eat-drink/cheongsudang7.jpg";
+import cheongsudang5 from "../assets/eat-drink/cheongsudang5.jpg";
+import cheongsudang6 from "../assets/eat-drink/cheongsudang3.png";
+
+import clementine1 from "../assets/eat-drink/Clementine(1).jpg";
+import clementine2 from "../assets/eat-drink/Clementine2.jpg";
+import clementine3 from "../assets/eat-drink/clementine.jpeg";
+import clementine4 from "../assets/eat-drink/clementine4.jpg";
+import clementine5 from "../assets/eat-drink/clementine5.jpg";
+import clementine6 from "../assets/eat-drink/clementine6.jpg";
+
+import ocheonjip1 from "../assets/eat-drink/Ocheonjip.jpg";
+import ocheonjip2 from "../assets/eat-drink/Ocheonjip2.jpg";
+import ocheonjip3 from "../assets/eat-drink/Ocheonjip4.jpg";
+import ocheonjip4 from "../assets/eat-drink/ocheonjip3.jpeg";
+import ocheonjip5 from "../assets/eat-drink/ocheonjip5.jpg";
+import ocheonjip6 from "../assets/eat-drink/ocheonjip6.jpg";
+
+import solsot1 from "../assets/eat-drink/solsot (1).jpg";
+import solsot2 from "../assets/eat-drink/solsot3.jpg";
+import solsot3 from "../assets/eat-drink/solsot4.jpg";
+import solsot4 from "../assets/eat-drink/solsot5.jpeg";
+import solsot5 from "../assets/eat-drink/solsot6.jpg";
+import solsot6 from "../assets/eat-drink/solsot7.jpg";
+
 const GALLERIES: Record<string, string[]> = {
   Cheongsudang: [
-    "/images/eat-drink/CheongsudangBakery3.JPG",
-    "/images/eat-drink/cheongsudang4.jpg",
-    "/images/eat-drink/cheongsudangBakery.jpg",
-    "/images/eat-drink/cheongsudang7.jpg",
-    "/images/eat-drink/cheongsudang5.jpg",
-    "/images/eat-drink/cheongsudang3.png",
+    cheongsudang1,
+    cheongsudang2,
+    cheongsudang3,
+    cheongsudang4,
+    cheongsudang5,
+    cheongsudang6,
   ],
   Clementine: [
-    "/images/eat-drink/Clementine (1).jpg",
-    "/images/eat-drink/Clementine2.JPG",
-    "/images/eat-drink/clementine.jpeg",
-    "/images/eat-drink/clementine4.jpg",
-    "/images/eat-drink/clementine5.jpg",
-    "/images/eat-drink/clementine6.jpg",
+    clementine1,
+    clementine2,
+    clementine3,
+    clementine4,
+    clementine5,
+    clementine6,
   ],
   Ocheonjip: [
-    "/images/eat-drink/Ocheonjip.JPG",
-    "/images/eat-drink/Ocheonjip2.JPG",
-    "/images/eat-drink/Ocheonjip4.JPG",
-    "/images/eat-drink/ocheonjip3.jpeg",
-    "/images/eat-drink/ocheonjip5.jpg",
-    "/images/eat-drink/ocheonjip6.jpg",
+    ocheonjip1,
+    ocheonjip2,
+    ocheonjip3,
+    ocheonjip4,
+    ocheonjip5,
+    ocheonjip6,
   ],
   Solsot: [
-    "/images/eat-drink/solsot (1).jpg",
-    "/images/eat-drink/solsot3.jpg",
-    "/images/eat-drink/solsot4.jpg",
-    "/images/eat-drink/solsot5.jpeg",
-    "/images/eat-drink/solsot6.jpg",
-    "/images/eat-drink/solsot7.jpg",
+   solsot1,
+   solsot2,
+   solsot3,
+   solsot4,
+   solsot5,
+   solsot6,
   ],
 };
 
@@ -66,11 +94,6 @@ export default function EatDrinkPage() {
     setActiveImage(undefined);
     document.body.style.overflow = "";
   }
-
-  const handleClick = (place: string) => {
-    setActive(place);
-  };
-
 
   const notes: Record<string,{ type: "text" | "bullet"; content: string }[]> = {
     Cheongsudang: [
