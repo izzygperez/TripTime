@@ -2,19 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./page.module.css";
 import gbgShow from "./assets/gbg_show.jpg";
-import hanPark from "./assets/hanPark.jpg";
-import gbg from "./assets/GBG.jpg";
+import solsot from "./assets/solsot7.jpg";
+import lf from "./assets/LanternFestival3.jpg";
 
 function App() {
-  // const cards = [
-  //   { src: "/images/gbg_show.jpg", label: "Culture", slug: "culture" },
-  //   { src: "/images/hanPark.jpg", label: "Eat & Drink", slug: "eat-drink" },
-  //   { src: "/images/GBG.jpg", label: "Activities", slug: "activities" },
-  // ];
   const cards = [
     { src: gbgShow, label: "Culture", slug: "culture" },
-    { src: hanPark, label: "Eat & Drink", slug: "eat-drink" },
-    { src: gbg, label: "Activities", slug: "activities" },
+    { src: solsot, label: "Eat & Drink", slug: "eat-drink" },
+    { src: lf, label: "Activities", slug: "activities" },
   ];
 
   return (
@@ -24,7 +19,7 @@ function App() {
         <select className={`${styles.dropbtn} dropdown`} enable-xr >
           <option>Seoul, South Korea</option>
           <option>Tokyo, Japan</option>
-          <option>Paris, France</option>
+          <option>Honolulu, Hawaii</option>
         </select>
       </header>
 

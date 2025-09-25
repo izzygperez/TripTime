@@ -51,6 +51,11 @@ html.is-spatial {
     --xr-back: 35;
   }
 
+  .polaroid {
+    position: relative;
+    --xr-back: 150;
+  }
+
   .info {
     transform-origin: top right;
     transform: translateZ(100px) rotateY(-15deg);

@@ -239,6 +239,8 @@ li {
   border-radius: 8px;
   padding: 25px 20px 85px 20px;
   background: white;
+  width: 35vw;
+  height: 35vh;
 }
 
 /* Puts a shadow on the rest of the website if modal is open */
@@ -249,8 +251,9 @@ li {
 
 .modal img {
   display: block;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 90%;
+  object-fit: contain;
 }
 
 .closeBtn {

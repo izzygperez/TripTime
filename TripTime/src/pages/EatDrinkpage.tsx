@@ -204,8 +204,8 @@ export default function EatDrinkPage() {
 
         <section className={styles.imageFeed}>
           <div className={styles.imgGrid}>
-            <dialog ref={dialogRef} className={styles.modal}>
-              <button className={styles.closeBtn} onClick={closeModal}>
+          <dialog ref={dialogRef} className={`${styles.modal} polaroid`} enable-xr >
+              <button className={`${styles.closeBtn} polaroid`} onClick={closeModal}>
                 X
               </button>
               <div>
@@ -213,7 +213,6 @@ export default function EatDrinkPage() {
                   <img src={activeImage} alt="Selected" />
                 )}
               </div>
-              
             </dialog>
 
             {galleryImages.map((img, idx) => (
