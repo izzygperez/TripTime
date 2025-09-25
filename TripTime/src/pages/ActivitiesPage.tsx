@@ -99,37 +99,46 @@ export default function ActivitiesPage() {
 
   const notes: Record<string,{ type: "text" | "bullet"; content: string }[]> = {
     Sparex: [
-      { type: "bullet", content: "Lots of hanbok rental options nearby" },
-      { type: "bullet", content: "Scheduled ceremonies throughout the day" },
-      { type: "text", content: "First Time Tips" },
+      { type: "bullet", content: "Traditional Korean-style spa that operates 24 hour a day" },
+      { type: "bullet", content: "Features Hanok architectural styles and natural wood materials" },
       {
         type: "bullet",
-        content: "There’s an entry discount if you show up in hanbok!!",
+        content: "Variety of facilities and programs, such as body scrubs, massages, and clay rooms",
       },
-      { type: "bullet", content: "Tons of photo op places since it’s a big landmark" },
-      { type: "bullet", content: "Check for special events to see the palace at night" },
+      { type: "bullet", content: "There’s a food court inside!" },
     ],
     OutdoorLibrary: [
-      { type: "bullet", content: "Very picturesque depending on the season" },
-      { type: "bullet", content: "Small shops with handmade and traditional items" },
-      { type: "text", content: "First Time Tips" },
-      { type: "bullet", content: "Be respectful of the residents in the area" },
-      { type: "bullet", content: "Go early to avoid crowds" },
+      { type: "bullet", content: "Celebrates Han Kang’s winning of the Nobel Prize in Literature on Oct 10" },
+      { 
+        type: "bullet", 
+        content: "Designed to allow people to freely read books and engage in cultural activities outside the traditional library setting", 
+      },
+      { type: "bullet", content: "Other locations include Seoul Plaza and Gwanghwamun Square" },
     ],
     LanternFestival: [
-      { type: "bullet", content: "Lots of different options to book a bus tour" },
-      { type: "bullet", content: "Museum has a cafe inside" },
-      { type: "bullet", content: "Souvenir stops throughout tour" },
-      { type: "text", content: "First Time Tips" },
-      { type: "bullet", content: "Bring identification and be respectful to soldiers" },
-      { type: "bullet", content: "Brush up on North and South Korean history" },
+      { 
+        type: "bullet", 
+        content: "Features various media/ LED sculptures with Korean traditional paper “Hanji” lanterns as the main focus",
+      },
+      { 
+        type: "bullet", 
+        content: "There are different themed areas and have both modern and traditional lantern designs",
+      },
     ],
     CherryBlossom: [
-      { type: "bullet", content: "Famous spot for Korean media" },
-      { type: "bullet", content: "Boat tours, cafes, bike rentals!!" },
-      { type: "text", content: "First Time Tips" },
-      { type: "bullet", content: "Check for special events for photo ops" },
-      { type: "bullet", content: "Have a little picnic with food from nearby convenience stores or fast food spots" },
+      { 
+        type: "bullet", 
+        content: "Yeouido Cherry Blossom Festival is the most well-known cherry blossom festival in Seoul",
+      },
+      { 
+        type: "bullet", 
+        content: "Over 1000 cherry blossom trees lined the entire lake with the Lotte World Magic Island in the background",
+      },
+      { type: "bullet", content: "At night, the cherry blossoms light up with various colored lights" },
+      { 
+        type: "bullet", 
+        content: "Other activities include concerts, piano on the lake performances, markets, and food trucks",
+      },
     ],
   };
 
