@@ -10,3 +10,45 @@ body {
   margin: 0;
   font-family: var(--font-sigmar-one);
 }
+
+html.is-spatial {
+  background-color: transparent;
+  --xr-background-material: transparent;
+  height: 100dvh;
+
+  .homePage {
+    --xr-back: 125;
+  }
+
+  .dropdown {
+    --xr-back: 100;
+  }
+
+  .doors {
+    --xr-back: 50;
+  }
+
+  .category {
+    position: relative;
+    --xr-back: 25;
+  }
+
+  .places {
+    transform-origin: top left;
+    transform: translateZ(125px) rotateY(25deg);
+  }
+
+  .placeCat {
+    position: relative;
+    --xr-back: 15;
+  }
+
+  .placeRec {
+    --xr-back: 25;
+  }
+
+  .info {
+    transform-origin: top right;
+    transform: translateZ(100px) rotateY(-15deg);
+  }
+}

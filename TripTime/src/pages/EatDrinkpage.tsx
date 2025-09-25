@@ -204,7 +204,7 @@ export default function EatDrinkPage() {
             )}
           </div>
         ) : (
-          <p>Select a location to see details.</p>
+          <p>Select A location to see details.</p>
         )}
         </section>
       </article>

@@ -208,7 +208,7 @@ export default function ActivitiesPage() {
             )}
           </div>
         ) : (
-          <p>Select a location to see details.</p>
+          <p>Select location to see details.</p>
         )}
         </section>
       </article>
