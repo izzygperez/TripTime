@@ -2,32 +2,55 @@ import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../styles/culture.module.css";
 
+/* Image imports for image feed on culture page */
+import gbgHistory from "../assets/culture/gbg_history.jpg";
+import gbgInside from "../assets/culture/gbg_inside.jpg";
+import gbgShow from "../assets/culture/gbg_show.jpg";
+import gbgMain from "../assets/culture/GBG.jpg";
+import gbg1 from "../assets/culture/gbg(1).jpg";
+import gbg from "../assets/culture/gyeongbokgung.jpg";
+
+import bhv1 from "../assets/culture/bHanokVillage.jpg";
+import bhv2 from "../assets/culture/BHV.jpg";
+import bhv3 from "../assets/culture/bhv(1).jpg";
+import bhv4 from "../assets/culture/Bukchon.jpg";
+import bhv5 from "../assets/culture/bukchon(1).jpg";
+
+import dmz1 from "../assets/culture/demilitarized-zone.jpg";
+import dmz2 from "../assets/culture/DMZ_map.png";
+import dmz3 from "../assets/culture/dmz.jpg";
+
+import hr1 from "../assets/culture/Hangang.jpg";
+import hr2 from "../assets/culture/hanPark.jpg";
+import hr3 from "../assets/culture/hanRiver.jpg";
+import hr4 from "../assets/culture/HanRiver(1).jpg";
+
 const GALLERIES: Record<string, string[]> = {
   Gyeongbokgung: [
-    "/images/culture/gbg_history.jpg",
-    "/images/culture/gbg_inside.jpg",
-    "/images/culture/gbg_show.jpg",
-    "/images/culture/GBG.jpg",
-    "/images/culture/gbg(1).jpg",
-    "/images/culture/gyeongbokgung.jpg",
+    gbgHistory,
+    gbgInside,
+    gbgShow,
+    gbgMain,
+    gbg1,
+    gbg,
   ],
   BukchonHanokVillage: [
-    "/images/culture/bHanokVillage.jpg",
-    "/images/culture/BHV.jpg",
-    "/images/culture/bhv(1).jpg",
-    "/images/culture/Bukchon.jpg",
-    "/images/culture/bukchon(1).jpg",
+    bhv1,
+    bhv2,
+    bhv3,
+    bhv4,
+    bhv5,
   ],
   DMZ: [
-    "/images/culture/demilitarized-zone.jpg",
-    "/images/culture/DMZ_map.png",
-    "/images/culture/dmz.jpg",
+    dmz1,
+    dmz2,
+    dmz3,
   ],
   HanRiver: [
-    "/images/culture/Hangang.jpg",
-    "/images/culture/hanPark.jpg",
-    "/images/culture/hanRiver.jpg",
-    "/images/culture/HanRiver(1).jpg",
+    hr1,
+    hr2,
+    hr3,
+    hr4,
   ],
 };
 
