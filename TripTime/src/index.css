@@ -16,6 +16,10 @@ html.is-spatial {
   --xr-background-material: transparent;
   height: 100dvh;
 
+  .name {
+    font-size: 4rem;
+  }
+
   .homePage {
     --xr-back: 125;
   }
@@ -44,7 +48,7 @@ html.is-spatial {
   }
 
   .placeRec {
-    --xr-back: 25;
+    --xr-back: 35;
   }
 
   .info {

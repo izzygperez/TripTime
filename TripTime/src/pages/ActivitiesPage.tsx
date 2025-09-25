@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import styles from "../styles/activities.module.css";
 
 /* Image imports for image feed on culture page */
@@ -133,61 +133,75 @@ export default function ActivitiesPage() {
     ],
   };
 
+  const location = useLocation();
+  
+  // map your paths to labels
+  const options = [
+    { value: "/destination/culture", label: "Culture" },
+    { value: "/destination/eat-drink", label: "Eat & Drink" },
+    { value: "/destination/activities", label: "Activities" },
+  ];
+  
+  // figure out which option matches current page
+  const currentValue = options.find(opt => location.pathname === opt.value)?.value || "/destination/culture";
+
   return (
     <main>
       <header className={styles.header}>
-        <button className={styles.home} onClick={() => navigate("/")}>
+        <button className={`${styles.home} homePage`} onClick={() => navigate("/")} enable-xr >
           🏠
         </button>
-        <h1 className={styles.title}>Activity</h1>
-        <select className={styles.dropbtn} onChange={(e) => navigate(e.target.value)}>
-          <option value="/destination/culture">Culture</option>
-          <option value="/destination/eat-drink">Eat & Drink</option>
-          <option value="/destination/activities">Activities</option>
+        <h1 className="name" enable-xr >Activity</h1>
+        <select className={`${styles.dropbtn} dropdown`} value={currentValue} onChange={(e) => navigate(e.target.value)} enable-xr >
+          {options.map((opt) => (
+            <option key={opt.value} value={opt.value}>
+              {opt.label}
+            </option>
+          ))}
         </select>
       </header>
 
       <article className={styles.article}>
-        <section className={styles.locations}>
-          <h2 className={styles.placeType}>Relaxing</h2>
+        <section className={`${styles.locations} places`} enable-xr >
+          <h2 className={`${styles.placeType} placeCat`} enable-xr >Relaxing</h2>
           <button 
-          className={`${styles.address} ${active === "sparex" ? styles.active : ""}`} 
+          className={`${styles.address} ${active === "sparex" ? styles.active : ""} placeRec`} 
           onClick={() => {
             setActive("sparex");
             setActiveLocation("Sparex");
-          }}>
+          }} enable-xr >
             <span className={styles.addyName}>Sparex</span>
             <br />
             <span className={styles.span}>18-21 Eulijiro 6(yuk)-ga Jung-gu, Seoul</span>
           </button>
           <button 
-          className={`${styles.address} ${active === "outdoorlibrary" ? styles.active : ""}`} 
+          className={`${styles.address} ${active === "outdoorlibrary" ? styles.active : ""} placeRec`} 
           onClick={() => {
             setActive("outdoorlibrary");
             setActiveLocation("OutdoorLibrary");
-          }}>
+          }} enable-xr >
             <span className={styles.addyName}>Outdoor Library</span>
             <br />
             <span className={styles.span}>Changsin-dong Jongno-gu, Seoul</span>
           </button>
 
-          <h2 className={styles.placeType}>Seasonal</h2>
+          <h2 className={`${styles.placeType} placeCat`} enable-xr >Seasonal</h2>
           <button 
-          className={`${styles.address} ${active === "LanternFestival" ? styles.active : ""}`} 
+          className={`${styles.address} ${active === "LanternFestival" ? styles.active : ""} placeRec`} 
           onClick={() => {
             setActive("lanternfestival");
             setActiveLocation("LanternFestival");
-          }}>
+          }} enable-xr >
             <span className={styles.addyName}>Lantern Festival</span>
             <br />
             <span className={styles.span}>Changsin-dong Jongno-gu, Seoul</span>
           </button>
           <button 
-          className={`${styles.address} ${active === "CherryBlossom" ? styles.active : ""}`} 
+          className={`${styles.address} ${active === "CherryBlossom" ? styles.active : ""} placeRec`} 
           onClick={() => {
             setActive("cherryblossom");
             setActiveLocation("CherryBlossom");
-          }}>
+          }} enable-xr >
             <span className={styles.addyName}>Cherry Blossom Viewing</span>
             <br />
             <span className={styles.span}>8 Yeouido-dong Yeongdeungpo-gu, Seoul</span>
@@ -218,7 +232,7 @@ export default function ActivitiesPage() {
           </div>
         </section>
 
-        <section className={styles.notes}>
+        <section className={`${styles.notes} info`} enable-xr >
           <h2>Notes</h2>
           {activeLocation ? (
           <div>

@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import styles from "../styles/culture.module.css";
 
 /* Image imports for image feed on culture page */
@@ -120,17 +120,31 @@ export default function CulturePage() {
     ],
   };
 
+  const location = useLocation();
+  
+  // map your paths to labels
+  const options = [
+    { value: "/destination/culture", label: "Culture" },
+    { value: "/destination/eat-drink", label: "Eat & Drink" },
+    { value: "/destination/activities", label: "Activities" },
+  ];
+  
+  // figure out which option matches current page
+  const currentValue = options.find(opt => location.pathname === opt.value)?.value || "/destination/culture";
+
   return (
     <main>
       <header className={styles.header}>
         <button className={`${styles.home} homePage`} onClick={() => navigate("/")} enable-xr >
           🏠
         </button>
-        <h1 className="name" enable-xr >TripTime</h1>
-        <select className={`${styles.dropbtn} dropdown`} onChange={(e) => {window.location.href = e.target.value;}} enable-xr >
-          <option value="/destination/culture">Culture</option>
-          <option value="/destination/eat-drink">Eat & Drink</option>
-          <option value="/destination/activities">Activities</option>
+        <h1 className="name" enable-xr >Culture</h1>
+        <select className={`${styles.dropbtn} dropdown`} value={currentValue} onChange={(e) => navigate(e.target.value)} enable-xr >
+          {options.map((opt) => (
+            <option key={opt.value} value={opt.value}>
+              {opt.label}
+            </option>
+          ))}
         </select>
       </header>
 
