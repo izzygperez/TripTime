@@ -16,6 +16,10 @@ html.is-spatial {
   --xr-background-material: transparent;
   height: 100dvh;
 
+  .homePage {
+    --xr-back: 125;
+  }
+
   .dropdown {
     --xr-back: 100;
   }
@@ -27,5 +31,24 @@ html.is-spatial {
   .category {
     position: relative;
     --xr-back: 25;
+  }
+
+  .places {
+    transform-origin: top left;
+    transform: translateZ(125px) rotateY(25deg);
+  }
+
+  .placeCat {
+    position: relative;
+    --xr-back: 15;
+  }
+
+  .placeRec {
+    --xr-back: 25;
+  }
+
+  .info {
+    transform-origin: top right;
+    transform: translateZ(100px) rotateY(-15deg);
   }
 }

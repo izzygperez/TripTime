@@ -79,11 +79,11 @@ export default function CulturePage() {
   return (
     <main>
       <header className={styles.header}>
-        <button className={styles.home} onClick={() => navigate("/")}>
+        <button className={`${styles.home} homePage`} onClick={() => navigate("/")} enable-xr >
           🏠
         </button>
         <h1 className="name" enable-xr >TripTime</h1>
-        <select className={styles.dropbtn} onChange={(e) => {window.location.href = e.target.value;}}>
+        <select className={`${styles.dropbtn} dropdown`} onChange={(e) => {window.location.href = e.target.value;}} enable-xr >
           <option value="/destination/culture">Culture</option>
           <option value="/destination/eat-drink">Eat & Drink</option>
           <option value="/destination/activities">Activities</option>
@@ -92,45 +92,45 @@ export default function CulturePage() {
 
       <article className={styles.article}>
         <section className={`${styles.locations} places`} enable-xr >
-          <h2 className={styles.placeType}>Historical Places</h2>
+          <h2 className={`${styles.placeType} placeCat`} enable-xr >Historical Places</h2>
           <button 
-          className={`${styles.address} ${active === "gyeongbokgung" ? styles.active : ""}`} 
+          className={`${styles.address} ${active === "gyeongbokgung" ? styles.active : ""} placeRec`} 
           onClick={() => {
             setActive("gyeongbokgung");
             setActiveLocation("Gyeongbokgung");
-          }}>
+          }} enable-xr >
             <span className={styles.addyName}>Gyeongbokgung</span>
             <br />
             <span className={styles.span}>161 Sajik-ro, Jongno-gu, Seoul</span>
           </button>
           <button 
-          className={`${styles.address} ${active === "bukchon" ? styles.active : ""}`} 
+          className={`${styles.address} ${active === "bukchon" ? styles.active : ""} placeRec`} 
           onClick={() => {
             setActive("bukchon");
             setActiveLocation("BukchonHanokVillage");
-          }}>
+          }} enable-xr >
             <span className={styles.addyName}>Bukchon Hanok Village</span>
             <br />
             <span className={styles.span}>37 Gyedong-gil, Jongno-gu, Seoul</span>
           </button>
 
-          <h2 className={styles.placeType}>Cultural Landmarks</h2>
+          <h2 className={`${styles.placeType} placeCat`} enable-xr >Cultural Landmarks</h2>
           <button 
-          className={`${styles.address} ${active === "dmz" ? styles.active : ""}`} 
+          className={`${styles.address} ${active === "dmz" ? styles.active : ""} placeRec`} 
           onClick={() => {
             setActive("dmz");
             setActiveLocation("DMZ");
-          }}>
+          }} enable-xr >
             <span className={styles.addyName}>DMZ</span>
             <br />
             <span className={styles.span}>Bus Tour Only</span>
           </button>
           <button 
-          className={`${styles.address} ${active === "hanriver" ? styles.active : ""}`} 
+          className={`${styles.address} ${active === "hanriver" ? styles.active : ""} placeRec`} 
           onClick={() => {
             setActive("hanriver");
             setActiveLocation("HanRiver");
-          }}>
+          }} enable-xr >
             <span className={styles.addyName}>Han River</span>
             <br />
             <span className={styles.span}>330 Yeouidong-ro, Yeongdeungpo-gu, Seoul</span>
@@ -160,7 +160,7 @@ export default function CulturePage() {
           </div>
         </section>
 
-        <section className={styles.notes}>
+        <section className={`${styles.notes} info`} enable-xr >
           <h2>Notes</h2>
           {activeLocation ? (
           <div>
