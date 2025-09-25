@@ -1,7 +1,35 @@
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { X } from "lucide-react";
 import styles from "../styles/culture.module.css";
+
+const GALLERIES: Record<string, string[]> = {
+  Gyeongbokgung: [
+    "/images/culture/gbg_history.jpg",
+    "/images/culture/gbg_inside.jpg",
+    "/images/culture/gbg_show.jpg",
+    "/images/culture/GBG.jpg",
+    "/images/culture/gbg(1).jpg",
+    "/images/culture/gyeongbokgung.jpg",
+  ],
+  BukchonHanokVillage: [
+    "/images/culture/bHanokVillage.jpg",
+    "/images/culture/BHV.jpg",
+    "/images/culture/bhv(1).jpg",
+    "/images/culture/Bukchon.jpg",
+    "/images/culture/bukchon(1).jpg",
+  ],
+  DMZ: [
+    "/images/culture/demilitarized-zone.jpg",
+    "/images/culture/DMZ_map.png",
+    "/images/culture/dmz.jpg",
+  ],
+  HanRiver: [
+    "/images/culture/Hangang.jpg",
+    "/images/culture/hanPark.jpg",
+    "/images/culture/hanRiver.jpg",
+    "/images/culture/HanRiver(1).jpg",
+  ],
+};
 
 export default function CulturePage() {
   const dialogRef = useRef<HTMLDialogElement | null>(null);
@@ -14,13 +42,18 @@ export default function CulturePage() {
     if (!activeImage) return;
 
     dialogRef.current?.showModal();
-    document.body.style.overflow = "hidden";
-
     dialogRef.current?.addEventListener("close", closeModal);
+
     return () => {
       dialogRef.current?.removeEventListener("close", closeModal);
     };
   }, [activeImage]);
+
+  useEffect(() => {
+    setActiveImage(undefined);
+  }, [activeLocation]);
+
+  const galleryImages = activeLocation ? GALLERIES[activeLocation] || [] : [];
 
   function closeModal() {
     dialogRef.current?.close();
@@ -30,15 +63,6 @@ export default function CulturePage() {
 
   console.log("CulturePage mounted");
 
-  // Example gallery images
-  const galleryImages = [
-    "/images/gbg_history.jpg",
-    "/images/gbg_inside.jpg",
-    "/images/gbg_show.jpg",
-    "/images/GBG.jpg",
-    "/images/gbg(1).jpg",
-    "/images/gyeongbokgung.jpg",
-  ];
 
   const notes: Record<string,{ type: "text" | "bullet"; content: string }[]> = {
     Gyeongbokgung: [
@@ -63,7 +87,7 @@ export default function CulturePage() {
       { type: "bullet", content: "Lots of different options to book a bus tour" },
       { type: "bullet", content: "Museum has a cafe inside" },
       { type: "bullet", content: "Souvenir stops throughout tour" },
-      { type: "type", content: "First Time Tips" },
+      { type: "text", content: "First Time Tips" },
       { type: "bullet", content: "Bring identification and be respectful to soldiers" },
       { type: "bullet", content: "Brush up on North and South Korean history" },
     ],
@@ -140,14 +164,15 @@ export default function CulturePage() {
         <section className={styles.imageFeed}>
           <div className={styles.imgGrid}>
             <dialog ref={dialogRef} className={styles.modal}>
-              {activeImage && (
-                <div className={styles.modalContent}>
-                  <img src={activeImage} alt="Selected" className={styles.modalImage} />
-                  <button className={styles.modalClose} onClick={closeModal}>
-                    <X />
-                  </button>
-                </div>
-              )}
+              <button className={styles.closeBtn} onClick={closeModal}>
+                X
+              </button>
+              <div>
+                {activeImage && (
+                  <img src={activeImage} alt="Selected" />
+                )}
+              </div>
+              
             </dialog>
 
             {galleryImages.map((img, idx) => (

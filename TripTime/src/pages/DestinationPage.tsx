@@ -10,5 +10,6 @@ export default function DestinationPage() {
   if (slug === "eat-drink") return <EatDrinkPage />;
   if (slug === "activities") return <ActivitiesPage />;
 
+
   return <p>Destination not found</p>;
 }
