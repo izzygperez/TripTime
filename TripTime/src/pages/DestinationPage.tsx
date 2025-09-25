@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import CulturePage from "./CulturePage";
-import EatDrinkPage from "./EatDrinkPage";
+import EatDrinkPage from "./EatDrinkpage";
 import ActivitiesPage from "./ActivitiesPage";
 
 export default function DestinationPage() {
