@@ -2,11 +2,11 @@ html {
   background-color: #fcf3e3;
 }
 
-title {
-  font-size: 3rem;
+/* .title {
+  font-size: 4rem;
   margin-top: 2%;
   margin-bottom: 2%;
-}
+} */
 
 header {
   display: flex;
@@ -80,6 +80,7 @@ article {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  min-height: 50vh;
 }
 
 .address {
@@ -128,9 +129,18 @@ span {
   gap: 10px;
 }
 
-.imageFeed img {
+/* .imageFeed img {
   object-fit: cover;
+} */
+
+.galleryImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       
+  object-position: center;  
+  display: block;           
 }
+
 
 .pic {
   position: relative;
@@ -139,6 +149,17 @@ span {
   overflow: hidden;
   text-align: center;
 }
+
+.pic > button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
 
 .notes {
   background-color: #bde3ce;
@@ -210,3 +231,47 @@ li {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+.modal {
+  position: relative;
+  overflow: visible;
+  border: none;
+  border-radius: 8px;
+  padding: 25px 20px 85px 20px;
+  background: white;
+  width: 35vw;
+  height: 35vh;
+}
+
+/* Puts a shadow on the rest of the website if modal is open */
+.modal::backdrop {
+  background: rgba(0, 0, 0, 0.65); 
+}
+
+
+.modal img {
+  display: block;
+  width: 100%;
+  height: 90%;
+  object-fit: contain;
+}
+
+.closeBtn {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background-color: #e5e5e5;
+  color: #111;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+

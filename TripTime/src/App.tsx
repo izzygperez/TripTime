@@ -1,26 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./page.module.css";
+import gbgShow from "./assets/gbg_show.jpg";
+import solsot from "./assets/solsot7.jpg";
+import lf from "./assets/LanternFestival3.jpg";
 
 function App() {
   const cards = [
-    { src: "/images/gbg_show.jpg", label: "Culture", slug: "culture" },
-    { src: "/images/hanPark.jpg", label: "Eat & Drink", slug: "eat-drink" },
-    { src: "/images/GBG.jpg", label: "Activities", slug: "activities" },
+    { src: gbgShow, label: "Culture", slug: "culture" },
+    { src: solsot, label: "Eat & Drink", slug: "eat-drink" },
+    { src: lf, label: "Activities", slug: "activities" },
   ];
 
   return (
     <div className={styles.page}>
       <header className={styles.header}>
-        <h1 className={styles.title}>TripTime</h1>
-        <select className={styles.dropbtn}>
+        <h1 className={styles.title} >TripTime</h1>
+        <select className={`${styles.dropbtn} dropdown`} enable-xr >
           <option>Seoul, South Korea</option>
           <option>Tokyo, Japan</option>
-          <option>Paris, France</option>
+          <option>Honolulu, Hawaii</option>
         </select>
       </header>
 
-      <main className={styles.cards}>
+      <main className={`${styles.cards} doors`} enable-xr >
         {cards.map((card, i) => (
           <Link
             key={i}
@@ -34,7 +37,7 @@ function App() {
               height={450}
               className={styles.image}
             />
-            <p className={styles.label}>{card.label}</p>
+            <p className={`${styles.label} category`} enable-xr >{card.label}</p>
           </Link>
         ))}
       </main>

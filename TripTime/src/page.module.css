@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fcf3e3;
   position: relative;
   overflow-x: hidden;
 }
@@ -15,7 +14,6 @@
   border-radius: 50%;
   z-index: 0;
   opacity: 0.15;
-  background: #1e3c72;
   mix-blend-mode: lighten;
 }
 
@@ -50,13 +48,7 @@
   font-size: 3rem;
   font-weight: 800;
   letter-spacing: 0.05em;
-
-  /* Navy-blue focused gradient */
-  background: linear-gradient(135deg, #062f4f 0%, #1e3c72 50%, #3a5a99 100%);
-  -webkit-background-clip: text;  /* Chrome, Safari, Edge */
-  background-clip: text;          /* Standard property */
-  -webkit-text-fill-color: transparent; /* WebKit fix */
-
+  color:#013d5a;
   position: relative;
   margin: 0;
   transition: transform 0.3s ease;
@@ -66,45 +58,10 @@
   transform: translateY(-2px);
 }
 
-
-
 @keyframes shine {
   0% { background-position: -500px; }
   100% { background-position: 500px; }
 }
-
-/* Glass-style dropdown */
-/* .dropdown {
-  padding: 10px 16px;
-  border-radius: 20px;
-  border: none;
-  background: rgba(255,255,255,0.3);
-  backdrop-filter: blur(8px);
-  font-size: 1rem;
-  font-weight: 500;
-  color: #062f4f;
-  cursor: pointer;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-  position: relative;
-  appearance: none;
-  padding-right: 32px;
-  transition: all 0.25s ease;
-}
-
-.dropdown:hover {
-  background: rgba(255,255,255,0.5);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
-}
-
-.dropdown::after {
-  content: '▾';
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  color: #062f4f;
-} */
 
 .dropbtn {
   appearance: none;
@@ -135,8 +92,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 6px solid #8b5e3c; /* gold-brown frame */
-  border-radius: 16px;
+  border: 15px solid #8b5e3c; /* gold-brown frame */
+  border-radius: 30px;
   background: rgba(255, 255, 255, 0.85); /* subtle glass layer */
   backdrop-filter: blur(6px);
   overflow: hidden;
@@ -156,7 +113,7 @@
   transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
               filter 0.5s ease, 
               box-shadow 0.5s ease;
-  border-radius: 12px;
+  border-radius: 12px 12px 0 0;
 }
 
 /* Hover effect on the card itself */
