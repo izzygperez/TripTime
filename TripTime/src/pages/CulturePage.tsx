@@ -60,7 +60,7 @@ export default function CulturePage() {
                     onClick={() => {
                       setActive(place.id);
                       setActivePlace(place);
-                      setActiveImage(place.gallery[0])}}
+                    }}
                   enable-xr >
                     <span>{place.name}</span>
                     <br />

@@ -19,9 +19,9 @@ export const TRIP_DATA = {
             name: "Gyeongbokgung",
             address: "161 Sajik-ro, Jongno-gu, Seoul",
             gallery: [
-              "/images/culture/gbg_history.jpg",
-              "/images/culture/gbg_inside.jpg",
-              "/images/culture/gbg_show.jpg",
+              "/images/korea/culture/gbg_history.jpg",
+              "/images/korea/culture/gbg_inside.jpg",
+              "/images/korea/culture/gbg_show.jpg",
             ],
             notes: [
               { type: "bullet", content: "Lots of hanbok rental options nearby" },
@@ -36,8 +36,8 @@ export const TRIP_DATA = {
             name: "Bukchon Hanok Village",
             address: "37 Gyedong-gil, Jongno-gu, Seoul",
             gallery: [
-              "/assets/culture/bhv1.jpg",
-              "/assets/culture/bhv2.jpg",
+              "/images/korea/culture/bHanokVillage.jpg",
+              "/images/korea/culture/BHV.jpg",
             ],
             notes: [
               { type: "bullet", content: "Very picturesque depending on the season" },
@@ -54,8 +54,8 @@ export const TRIP_DATA = {
             name: "DMZ",
             address: "Bus Tour Only",
             gallery: [
-              "/assets/culture/dmz_map.png",
-              "/assets/culture/dmz1.jpg",
+              "/images/korea/culture/DMZ_map.png",
+              "/images/korea/culture/dmz.jpg",
             ],
             notes: [
               { type: "bullet", content: "Lots of different options to book a bus tour" },
@@ -70,8 +70,8 @@ export const TRIP_DATA = {
             name: "Han River",
             address: "330 Yeouidong-ro, Yeongdeungpo-gu, Seoul",
             gallery: [
-              "/assets/culture/han1.jpg",
-              "/assets/culture/han2.jpg",
+              "/images/korea/culture/Hangang.jpg",
+              "/images/korea/culture/hanPark.jpg",
             ],
             notes: [
               { type: "bullet", content: "Famous spot for Korean media" },
