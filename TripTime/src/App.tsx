@@ -2,34 +2,33 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./page.module.css";
-import gbgShow from "./assets/gbg_show.jpg";
-import solsot from "./assets/solsot7.jpg";
-import lf from "./assets/LanternFestival3.jpg";
+
+import gbg_show from "./assets/korea/culture/gbg_show.jpg";
+import solsot7 from "./assets/korea/eat-drink/solsot7.jpg";
+import lf3 from "./assets/korea/activities/LanternFestival3.jpg"
+
+import garden from "./assets/japan/culture/garden.jpg";
+import market from "./assets/japan/eat-drink/market.jpg";
+import tower from "./assets/japan/activities/tower.jpg";
 
 function App() {
-  const cards = [
-    { src: gbgShow, label: "Culture", slug: "culture" },
-    { src: solsot, label: "Eat & Drink", slug: "eat-drink" },
-    { src: lf, label: "Activities", slug: "activities" },
-  ];
-
   const locations = [
     {
       name: "Seoul, South Korea",
       key: "korea",
       cards: [
-        { src: "/images/korea/culture/gbg_show.jpg", label: "Culture", slug: "culture" },
-        { src: "/images/korea/eat-drink/solsot7.jpg", label: "Eat & Drink", slug: "eat-drink" },
-        { src: "/images/korea/activities/LanternFestival3.jpg", label: "Activities", slug: "activities" },
+        { src: gbg_show, label: "Culture", slug: "culture" },
+        { src: solsot7, label: "Eat & Drink", slug: "eat-drink" },
+        { src: lf3, label: "Activities", slug: "activities" },
       ],
     },
     {
       name: "Tokyo, Japan",
       key: "japan",
       cards: [
-        { src: "/images/japan/culture/garden.jpg", label: "Culture", slug: "culture" },
-        { src: "/images/japan/eat-drink/market.jpg", label: "Eat & Drink", slug: "eat-drink" },
-        { src: "/images/japan/activities/tower.jpg", label: "Activities", slug: "activities" },
+        { src: garden, label: "Culture", slug: "culture" },
+        { src: market, label: "Eat & Drink", slug: "eat-drink" },
+        { src: tower, label: "Activities", slug: "activities" },
       ],
     },
   ];

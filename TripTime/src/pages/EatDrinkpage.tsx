@@ -2,33 +2,33 @@ import { useState, useRef, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import styles from "../styles/eatDrink.module.css";
 
-import cheongsudang1 from "../assets/eat-drink/CheongsudangBakery3.jpg";
-import cheongsudang2 from "../assets/eat-drink/cheongsudang4.jpg";
-import cheongsudang3 from "../assets/eat-drink/cheongsudangBakery.jpg";
-import cheongsudang4 from "../assets/eat-drink/cheongsudang7.jpg";
-import cheongsudang5 from "../assets/eat-drink/cheongsudang5.jpg";
-import cheongsudang6 from "../assets/eat-drink/cheongsudang3.png";
+import cheongsudang1 from "../assets/korea/eat-drink/CheongsudangBakery3.jpg";
+import cheongsudang2 from "../assets/korea/eat-drink/cheongsudang4.jpg";
+import cheongsudang3 from "../assets/korea/eat-drink/cheongsudangBakery.jpg";
+import cheongsudang4 from "../assets/korea/eat-drink/cheongsudang7.jpg";
+import cheongsudang5 from "../assets/korea/eat-drink/cheongsudang5.jpg";
+import cheongsudang6 from "../assets/korea/eat-drink/cheongsudang3.png";
 
-import clementine1 from "../assets/eat-drink/Clementine(1).jpg";
-import clementine2 from "../assets/eat-drink/Clementine2.jpg";
-import clementine3 from "../assets/eat-drink/clementine.jpeg";
-import clementine4 from "../assets/eat-drink/clementine4.jpg";
-import clementine5 from "../assets/eat-drink/clementine5.jpg";
-import clementine6 from "../assets/eat-drink/clementine6.jpg";
+import clementine1 from "../assets/korea/eat-drink/Clementine(1).jpg";
+import clementine2 from "../assets/korea/eat-drink/Clementine2.jpg";
+import clementine3 from "../assets/korea/eat-drink/clementine.jpeg";
+import clementine4 from "../assets/korea/eat-drink/clementine4.jpg";
+import clementine5 from "../assets/korea/eat-drink/clementine5.jpg";
+import clementine6 from "../assets/korea/eat-drink/clementine6.jpg";
 
-import ocheonjip1 from "../assets/eat-drink/Ocheonjip.jpg";
-import ocheonjip2 from "../assets/eat-drink/Ocheonjip2.jpg";
-import ocheonjip3 from "../assets/eat-drink/Ocheonjip4.jpg";
-import ocheonjip4 from "../assets/eat-drink/ocheonjip3.jpeg";
-import ocheonjip5 from "../assets/eat-drink/ocheonjip5.jpg";
-import ocheonjip6 from "../assets/eat-drink/ocheonjip6.jpg";
+import ocheonjip1 from "../assets/korea/eat-drink/Ocheonjip.jpg";
+import ocheonjip2 from "../assets/korea/eat-drink/Ocheonjip2.jpg";
+import ocheonjip3 from "../assets/korea/eat-drink/Ocheonjip4.jpg";
+import ocheonjip4 from "../assets/korea/eat-drink/ocheonjip3.jpeg";
+import ocheonjip5 from "../assets/korea/eat-drink/ocheonjip5.jpg";
+import ocheonjip6 from "../assets/korea/eat-drink/ocheonjip6.jpg";
 
-import solsot1 from "../assets/eat-drink/solsot (1).jpg";
-import solsot2 from "../assets/eat-drink/solsot3.jpg";
-import solsot3 from "../assets/eat-drink/solsot4.jpg";
-import solsot4 from "../assets/eat-drink/solsot5.jpeg";
-import solsot5 from "../assets/eat-drink/solsot6.jpg";
-import solsot6 from "../assets/eat-drink/solsot7.jpg";
+import solsot1 from "../assets/korea/eat-drink/solsot (1).jpg";
+import solsot2 from "../assets/korea/eat-drink/solsot3.jpg";
+import solsot3 from "../assets/korea/eat-drink/solsot4.jpg";
+import solsot4 from "../assets/korea/eat-drink/solsot5.jpeg";
+import solsot5 from "../assets/korea/eat-drink/solsot6.jpg";
+import solsot6 from "../assets/korea/eat-drink/solsot7.jpg";
 
 const GALLERIES: Record<string, string[]> = {
   Cheongsudang: [

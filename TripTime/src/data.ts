@@ -9,6 +9,10 @@ export interface Place {
   notes: { type: "text" | "bullet"; content: string }[];
 }
 
+import gbg_history from "./assets/korea/culture/gbg_history.jpg";
+import gbg_inside from "./assets/korea/culture/gbg_inside.jpg";
+import gbg_show from "./assets/korea/culture/gbg_show.jpg";
+
 // src/data/data.ts
 export const TRIP_DATA = {
     korea: {
@@ -18,11 +22,7 @@ export const TRIP_DATA = {
             id: "gyeongbokgung",
             name: "Gyeongbokgung",
             address: "161 Sajik-ro, Jongno-gu, Seoul",
-            gallery: [
-              "/images/korea/culture/gbg_history.jpg",
-              "/images/korea/culture/gbg_inside.jpg",
-              "/images/korea/culture/gbg_show.jpg",
-            ],
+            gallery: [ gbg_history, gbg_inside, gbg_show ],
             notes: [
               { type: "bullet", content: "Lots of hanbok rental options nearby" },
               { type: "bullet", content: "Scheduled ceremonies throughout the day" },

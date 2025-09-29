@@ -3,33 +3,33 @@ import { useNavigate, useLocation } from "react-router-dom";
 import styles from "../styles/activities.module.css";
 
 /* Image imports for image feed on culture page */
-import sparex1 from "../assets/activities/sparex.png";
-import sparex2 from "../assets/activities/sparex2.jpg";
-import sparex3 from "../assets/activities/sparex3.png";
-import sparex4 from "../assets/activities/sparex4.png";
-import sparex5 from "../assets/activities/sparex5.jpg";
-import sparex6 from "../assets/activities/sparex6.png";
+import sparex1 from "../assets/korea/activities/sparex.png";
+import sparex2 from "../assets/korea/activities/sparex2.jpg";
+import sparex3 from "../assets/korea/activities/sparex3.png";
+import sparex4 from "../assets/korea/activities/sparex4.png";
+import sparex5 from "../assets/korea/activities/sparex5.jpg";
+import sparex6 from "../assets/korea/activities/sparex6.png";
 
-import ol1 from "../assets/activities/outdoorlibrary.jpg";
-import ol2 from "../assets/activities/outdoorlibrary2.jpg";
-import ol3 from "../assets/activities/outdoorlibrary3.jpg";
-import ol4 from "../assets/activities/outdoorlibrary4.jpg";
-import ol5 from "../assets/activities/outdoorlibrary5.jpg";
-import ol6 from "../assets/activities/outdoorlibrary6.jpg";
+import ol1 from "../assets/korea/activities/outdoorlibrary.jpg";
+import ol2 from "../assets/korea/activities/outdoorlibrary2.jpg";
+import ol3 from "../assets/korea/activities/outdoorlibrary3.jpg";
+import ol4 from "../assets/korea/activities/outdoorlibrary4.jpg";
+import ol5 from "../assets/korea/activities/outdoorlibrary5.jpg";
+import ol6 from "../assets/korea/activities/outdoorlibrary6.jpg";
 
-import lf1 from "../assets/activities/LanternFestival.jpg";
-import lf2 from "../assets/activities/LanternFestival2.jpg";
-import lf3 from "../assets/activities/LanternFestival3.jpg";
-import lf4 from "../assets/activities/LanternFestival4.jpg";
-import lf5 from "../assets/activities/LanternFestival5.jpg";
-import lf6 from "../assets/activities/LanternFestival6.jpg";
+import lf1 from "../assets/korea/activities/LanternFestival.jpg";
+import lf2 from "../assets/korea/activities/LanternFestival2.jpg";
+import lf3 from "../assets/korea/activities/LanternFestival3.jpg";
+import lf4 from "../assets/korea/activities/LanternFestival4.jpg";
+import lf5 from "../assets/korea/activities/LanternFestival5.jpg";
+import lf6 from "../assets/korea/activities/LanternFestival6.jpg";
 
-import cb1 from "../assets/activities/CherryBlossom.jpg";
-import cb2 from "../assets/activities/CherryBlossom2.jpg";
-import cb3 from "../assets/activities/CherryBlossom3.jpg";
-import cb4 from "../assets/activities/CherryBlossom4.jpg";
-import cb5 from "../assets/activities/CherryBlossom5.jpg";
-import cb6 from "../assets/activities/CherryBlossom6.jpg";
+import cb1 from "../assets/korea/activities/CherryBlossom.jpg";
+import cb2 from "../assets/korea/activities/CherryBlossom2.jpg";
+import cb3 from "../assets/korea/activities/CherryBlossom3.jpg";
+import cb4 from "../assets/korea/activities/CherryBlossom4.jpg";
+import cb5 from "../assets/korea/activities/CherryBlossom5.jpg";
+import cb6 from "../assets/korea/activities/CherryBlossom6.jpg";
 
 
 const GALLERIES: Record<string, string[]> = {
