@@ -1,3 +1,4 @@
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 <h1>TripTime</h1>
 
 TripTime is a 3D spatial web app built with the [WebSpatial SDK](https://github.com/webspatial/sample-techshop) for Apple Vision Pro.
@@ -32,7 +33,7 @@ Our third stop: Hawaii, USA
 - 🖼️ Image Gallery – immersive exploration in a Gen Z style
 - 📝 Customized notes – fun facts, first time advice, popular menu items, and more!
 
-## Demo
+## Demo Video
 
 [![Thumbnail](/TripTime/public/images/triptime_visionpro.PNG)](https://youtu.be/rlbVBEx7PIE)
 
@@ -69,3 +70,6 @@ The port number should match the link provided when you run the first command.
 XR_ENV=avp npm run dev
 npx webspatial-builder run --base=http://localhost:3001/
 ```
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
