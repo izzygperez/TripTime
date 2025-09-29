@@ -90,6 +90,81 @@ import solsot4 from "./assets/korea/eat-drink/solsot5.jpeg";
 import solsot5 from "./assets/korea/eat-drink/solsot6.jpg";
 import solsot6 from "./assets/korea/eat-drink/solsot7.jpg";
 
+// Image imports for image feed on Japan culture page 
+import garden1 from "./assets/japan/culture/garden.jpg";
+import garden2 from "./assets/japan/culture/garden2.jpg";
+import garden3 from "./assets/japan/culture/garden3.jpg";
+import garden4 from "./assets/japan/culture/garden4.jpg";
+import garden5 from "./assets/japan/culture/garden5.jpg";
+import garden6 from "./assets/japan/culture/garden6.jpg";
+
+import gotokuji1 from "./assets/japan/culture/gotokuji.jpg";
+import gotokuji2 from "./assets/japan/culture/gotokuji2.jpg";
+import gotokuji3 from "./assets/japan/culture/gotokuji3.jpg";
+import gotokuji4 from "./assets/japan/culture/gotokuji4.jpg";
+import gotokuji5 from "./assets/japan/culture/gotokuji5.jpg";
+import gotokuji6 from "./assets/japan/culture/gotokuji6.jpg";
+
+import palace1 from "./assets/japan/culture/palace.jpg";
+import palace2 from "./assets/japan/culture/palace2.jpg";
+import palace3 from "./assets/japan/culture/palace3.jpg";
+import palace4 from "./assets/japan/culture/palace4.jpg";
+import palace5 from "./assets/japan/culture/palace5.jpg";
+import palace6 from "./assets/japan/culture/palace6.jpg";
+
+import sensoji1 from "./assets/japan/culture/sensoji.jpg";
+import sensoji2 from "./assets/japan/culture/sensoji2.jpg";
+import sensoji3 from "./assets/japan/culture/sensoji3.jpg";
+import sensoji4 from "./assets/japan/culture/sensoji4.jpg";
+import sensoji5 from "./assets/japan/culture/sensoji5.jpg";
+import sensoji6 from "./assets/japan/culture/sensoji6.jpg";
+
+// Image imports for image feed on Japan activities page 
+import disney1 from "./assets/japan/activities/disney.jpg";
+import disney2 from "./assets/japan/activities/disney2.jpg";
+import disney3 from "./assets/japan/activities/disney3.jpg";
+import disney4 from "./assets/japan/activities/disney4.jpg";
+import disney5 from "./assets/japan/activities/disney5.jpg";
+import disney6 from "./assets/japan/activities/disney6.jpg";
+
+import snoopy1 from "./assets/japan/activities/snoopy.jpg";
+import snoopy2 from "./assets/japan/activities/snoopy2.jpg";
+import snoopy3 from "./assets/japan/activities/snoopy3.jpg";
+import snoopy4 from "./assets/japan/activities/snoopy4.jpg";
+import snoopy5 from "./assets/japan/activities/snoopy5.jpg";
+import snoopy6 from "./assets/japan/activities/snoopy6.jpg";
+
+import tl1 from "./assets/japan/activities/teamlab.jpg";
+import tl2 from "./assets/japan/activities/teamlab2.jpg";
+import tl3 from "./assets/japan/activities/teamlab3.jpg";
+import tl4 from "./assets/japan/activities/teamlab4.jpg";
+import tl5 from "./assets/japan/activities/teamlab5.jpg";
+import tl6 from "./assets/japan/activities/teamlab6.jpg";
+
+import tower1 from "./assets/japan/activities/tower.jpg";
+import tower2 from "./assets/japan/activities/tower2.jpg";
+import tower3 from "./assets/japan/activities/tower3.jpg";
+import tower4 from "./assets/japan/activities/tower4.jpg";
+import tower5 from "./assets/japan/activities/tower5.jpg";
+import tower6 from "./assets/japan/activities/tower6.jpg";
+
+// Image imports for image feed on Japan eat-drink page 
+import ameyoko1 from "./assets/japan/eat-drink/ameyoko.jpg";
+import ameyoko2 from "./assets/japan/eat-drink/ameyoko2.jpg";
+import ameyoko3 from "./assets/japan/eat-drink/ameyoko3.jpg";
+import ameyoko4 from "./assets/japan/eat-drink/ameyoko4.jpg";
+import ameyoko5 from "./assets/japan/eat-drink/ameyoko5.jpg";
+import ameyoko6 from "./assets/japan/eat-drink/ameyoko6.jpg";
+
+import ichiran1 from "./assets/japan/eat-drink/ichiran.jpg";
+import ichiran2 from "./assets/japan/eat-drink/ichiran1.jpg";
+import ichiran3 from "./assets/japan/eat-drink/ichiran2.jpg";
+
+import market1 from "./assets/japan/eat-drink/market.jpg";
+import market2 from "./assets/japan/eat-drink/market2.jpg";
+import market4 from "./assets/japan/eat-drink/market4.jpg";
+import market6 from "./assets/japan/eat-drink/market6.jpg";
+
 export const TRIP_DATA = {
     korea: {
       culture: {
@@ -288,11 +363,7 @@ export const TRIP_DATA = {
                   id: "gotokuji",
                   name: "Gotokuji Temple",
                   address: "2 Chome-24-7 Gotokuji, Setagaya City, Tokyo",
-                  gallery: [
-                    "/images/japan/culture/gotokuji.jpg",
-                    "/images/japan/culture/gotokuji2.jpg",
-                    "/images/japan/culture/gotokuji3.jpg",
-                  ],
+                  gallery: [ gotokuji1, gotokuji2, gotokuji3, gotokuji4, gotokuji5, gotokuji6 ],
                   notes: [
                     { type: "bullet", content: "Edo period Buddhist temple with a large collection of lucky beckoning cat statues" },
                   ],
@@ -301,11 +372,7 @@ export const TRIP_DATA = {
                   id: "sensoji",
                   name: "Senso-ji",
                   address: "2 Chome-3-1 Asakusa, Taito City, Tokyo",
-                  gallery: [
-                    "/images/japan/culture/sensoji.jpg",
-                    "/images/japan/culture/sensoji2.jpg",
-                    "/images/japan/culture/sensoji3.jpg",
-                  ],
+                  gallery: [ sensoji1, sensoji2, sensoji3, sensoji4, sensoji5, sensoji6 ],
                   notes: [
                     { type: "bullet", content: "Completed in 645, this is Tokyo's oldest temple" },
                     { type: "bullet", content: "Built to honor Kannon, the goddess of mercy" },
@@ -317,11 +384,7 @@ export const TRIP_DATA = {
                   id: "imperial",
                   name: "Imperial Palace",
                   address: "1-1 Chiyoda, Chiyoda City, Tokyo",
-                  gallery: [
-                    "/images/japan/culture/palace.jpg",
-                    "/images/japan/culture/palace2.jpg",
-                    "/images/japan/culture/palace3.jpg",
-                  ],
+                  gallery: [ palace1, palace2, palace3, palace4, palace5, palace6 ],
                   notes: [
                     { type: "bullet", content: "Features scenic gardens & tours of the grounds" },
                     { type: "bullet", content: "This site is the main residence of the emperor of Japan" },
@@ -331,11 +394,7 @@ export const TRIP_DATA = {
                   id: "garden",
                   name: "Shinjuku Gyoen National Garden",
                   address: "11 Naitomachi, Shinjuku City, Tokyo",
-                  gallery: [
-                    "/images/japan/culture/garden.jpg",
-                    "/images/japan/culture/garden2.jpg",
-                    "/images/japan/culture/garden3.jpg",
-                  ],
+                  gallery: [ garden1, garden2, garden3, garden4, garden5, garden6 ],
                   notes: [
                     { type: "bullet", content: "This former estate is a 144-acre park" },
                     { type: "bullet", content: "Features diverse garden areas, grassy expanses & a greenhouse" },
@@ -344,101 +403,90 @@ export const TRIP_DATA = {
             ],
         },
         activities: {
-          Relaxing: [
+          PopularSpots: [
             {
-              id: "",
-              name: "",
-              address: "",
-              gallery: [ ],
+              id: "disney",
+              name: "Tokyo Disneyland",
+              address: "1-1 Maihama, Urayasu, Chiba 279-0031, Tokyo",
+              gallery: [ disney1, disney2, disney3, disney4, disney5, disney6 ],
               notes: [
-                { type: "bullet", content: "" },
+                { type: "bullet", content: "Tokyo offshoot of the iconic theme park" },
+                { type: "bullet", content: "Known for its rides, live shows & costumed characters"},
                 { type: "text", content: "First Time Tips" },
-                { type: "bullet", content: "" },
+                { type: "bullet", content: "Show up to the park right at opening!!" },
+                { type: "bullet", content: "Schedule your visit on an off day, like a weekday" },
               ],
             },
             {
-              id: "",
-              name: "",
-              address: "",
-              gallery: [ ],
+              id: "tower",
+              name: "Tokyo Tower",
+              address: "4 Chome-2-8 Shibakoen, Minato City, Tokyo",
+              gallery: [ tower1, tower2, tower3, tower4, tower5, tower6 ],
               notes: [
-                { type: "bullet", content: "" },
-                { type: "text", content: "First Time Tips" },
-                { type: "bullet", content: "" },
+                { type: "bullet", content: "Reminiscent of the Eiffel Tower, this landmark features observation areas & other attractions" },
               ],
             },
           ],
-          Seasonal: [
+          Museums: [
             {
-              id: "",
-              name: "",
-              address: "",
-              gallery: [ ],
+              id: "teamlab",
+              name: "TeamLab",
+              address: "5 Chome-9 Azabudai Hills Garden Plaza, Minato City, Tokyo",
+              gallery: [ tl1, tl2, tl3, tl4, tl5, tl6 ],
               notes: [
-                { type: "bullet", content: "" },
-                { type: "text", content: "First Time Tips" },
-                { type: "bullet", content: "" },
+                { type: "text", content: "Other Locations" },
+                {
+                  type: "bullet",
+                  content: "6 Chome-1-16 Toyosu, Koto City, Tokyo",
+                },
+                { type: "bullet", content: "Popular, immersive museum known for its colorful, futuristic digital art installations & photo ops" },
               ],
             },
             {
-              id: "",
-              name: "",
-              address: "",
-              gallery: [ ],
+              id: "snoopy",
+              name: "Snoopy Museum",
+              address: "3 Chome-1-4 Tsuruma, Machida, Tokyo",
+              gallery: [ snoopy1, snoopy2, snoopy3, snoopy4, snoopy5, snoopy6 ],
               notes: [
-                { type: "bullet", content: "" },
-                { type: "text", content: "First Time Tips" },
-                { type: "bullet", content: "" },
+                { type: "bullet", content: "Original Charles Schulz drawings and a gallery of Peanuts characters" },
+                { type: "bullet", content: "Try the make your own Snoopy workshops" },
               ],
             },
           ],
       },
       eatDrink: {
-        Cafes: [
+        Markets: [
           {
-            id: "",
-            name: "",
-            address: "",
-            gallery: [ ],
+            id: "tsukiji",
+            name: "Tsukiji Outer Market",
+            address: "4 Chome, Tsukiji, Chuo City, Tokyo",
+            gallery: [ market1, market2, market4, market6 ],
             notes: [
-              { type: "bullet", content: "" },
-              { type: "text", content: "First Time Tips" },
-              { type: "bullet", content: "" },
+              { type: "bullet", content: "Sprawling wholesale fish market with an array of seafood" },
+              { type: "bullet", content: "Features viewing areas for a popular tuna auction" },
             ],
           },
           {
-            id: "",
-            name: "",
-            address: "",
-            gallery: [ ],
+            id: "ameyoko",
+            name: "Ameyoko Night Market",
+            address: "4 Ueno, Taito City, Tokyo",
+            gallery: [ ameyoko1, ameyoko2, ameyoko3, ameyoko4, ameyoko5, ameyoko6 ],
             notes: [
-              { type: "bullet", content: "" },
-              { type: "text", content: "First Time Tips" },
-              { type: "bullet", content: "" },
+              { type: "bullet", content: "Sells clothes, fish, cosmetics, and spices" },
+              { type: "bullet", content: "Became a huge marketplace after WWII" },
             ],
           },
         ],
         Restaurants: [
           {
-            id: "",
-            name: "",
-            address: "",
-            gallery: [ ],
+            id: "ichiran",
+            name: "Ichiran Ramen",
+            address: "Multiple Locations",
+            gallery: [ ichiran1, ichiran2, ichiran3 ],
             notes: [
-              { type: "bullet", content: "" },
-              { type: "text", content: "First Time Tips" },
-              { type: "bullet", content: "" },
-            ],
-          },
-          {
-            id: "",
-            name: "",
-            address: "",
-            gallery: [ ],
-            notes: [
-              { type: "bullet", content: "" },
-              { type: "text", content: "First Time Tips" },
-              { type: "bullet", content: "" },
+              { type: "bullet", content: "Popular ramen spot known for minimum social interaction" },
+              { type: "bullet", content: "This restaurant only serves one type of ramen, tonkotsu" },
+              { type: "bullet", content: "Available in instant ramen form as well" },
             ],
           },
         ],
