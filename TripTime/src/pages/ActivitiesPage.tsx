@@ -74,6 +74,7 @@ export default function ActivitiesPage() {
   const [activeLocation, setActiveLocation] = useState<string | null>(null);
   const [active, setActive] = useState<string | null>(null);
 
+  // Open dialog (modal) when activeImage is set
   useEffect(() => {
     if (!activeImage) return;
 
@@ -91,6 +92,7 @@ export default function ActivitiesPage() {
 
   const galleryImages = activeLocation ? GALLERIES[activeLocation] || [] : [];
 
+  // Closes the dialog (modal) and clears activeImage
   function closeModal() {
     dialogRef.current?.close();
     setActiveImage(undefined);
