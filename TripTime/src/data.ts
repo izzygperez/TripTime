@@ -12,6 +12,24 @@ export interface Place {
 import gbg_history from "./assets/korea/culture/gbg_history.jpg";
 import gbg_inside from "./assets/korea/culture/gbg_inside.jpg";
 import gbg_show from "./assets/korea/culture/gbg_show.jpg";
+import GBG from "./assets/korea/culture/GBG.jpg";
+import gbg1 from "./assets/korea/culture/gbg(1).jpg";
+import gbg from "./assets/korea/culture/gyeongbokgung.jpg"
+
+import bHanokVillage from "./assets/korea/culture/bHanokVillage.jpg";
+import BHV from "./assets/korea/culture/BHV.jpg";
+import bhv1 from "./assets/korea/culture/bhv(1).jpg";
+import bukchon from "./assets/korea/culture/Bukchon.jpg";
+import bhv2 from "./assets/korea/culture/bukchon(1).jpg";
+
+import zone from "./assets/korea/culture/demilitarized-zone.jpg";
+import map from "./assets/korea/culture/DMZ_map.png";
+import dmz from "./assets/korea/culture/dmz.jpg";
+
+import hangang from "./assets/korea/culture/Hangang.jpg";
+import hanPark from "./assets/korea/culture/hanPark.jpg";
+import hanRiver from "./assets/korea/culture/hanRiver.jpg";
+import hr from "./assets/korea/culture/HanRiver(1).jpg";
 
 // src/data/data.ts
 export const TRIP_DATA = {
@@ -22,7 +40,7 @@ export const TRIP_DATA = {
             id: "gyeongbokgung",
             name: "Gyeongbokgung",
             address: "161 Sajik-ro, Jongno-gu, Seoul",
-            gallery: [ gbg_history, gbg_inside, gbg_show ],
+            gallery: [ gbg_history, gbg_inside, gbg_show, GBG, gbg1, gbg ],
             notes: [
               { type: "bullet", content: "Lots of hanbok rental options nearby" },
               { type: "bullet", content: "Scheduled ceremonies throughout the day" },
@@ -35,10 +53,7 @@ export const TRIP_DATA = {
             id: "bukchon",
             name: "Bukchon Hanok Village",
             address: "37 Gyedong-gil, Jongno-gu, Seoul",
-            gallery: [
-              "/images/korea/culture/bHanokVillage.jpg",
-              "/images/korea/culture/BHV.jpg",
-            ],
+            gallery: [ bHanokVillage, BHV, bhv1, bukchon, bhv2 ],
             notes: [
               { type: "bullet", content: "Very picturesque depending on the season" },
               { type: "bullet", content: "Small shops with handmade and traditional items" },
@@ -53,10 +68,7 @@ export const TRIP_DATA = {
             id: "dmz",
             name: "DMZ",
             address: "Bus Tour Only",
-            gallery: [
-              "/images/korea/culture/DMZ_map.png",
-              "/images/korea/culture/dmz.jpg",
-            ],
+            gallery: [ zone, map, dmz ],
             notes: [
               { type: "bullet", content: "Lots of different options to book a bus tour" },
               { type: "bullet", content: "Museum has a cafe inside" },
@@ -69,10 +81,7 @@ export const TRIP_DATA = {
             id: "hanriver",
             name: "Han River",
             address: "330 Yeouidong-ro, Yeongdeungpo-gu, Seoul",
-            gallery: [
-              "/images/korea/culture/Hangang.jpg",
-              "/images/korea/culture/hanPark.jpg",
-            ],
+            gallery: [ hangang, hanPark, hanRiver, hr ],
             notes: [
               { type: "bullet", content: "Famous spot for Korean media" },
               { type: "bullet", content: "Boat tours, cafes, bike rentals!!" },

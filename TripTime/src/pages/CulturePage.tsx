@@ -92,8 +92,8 @@ export default function CulturePage() {
         <section className={styles.imageFeed}>
           <div className={styles.imgGrid}>
             {/* simple modal */}
-            <dialog ref={dialogRef} className={styles.modal}>
-              <button className={styles.closeBtn} onClick={closeModal}>
+            <dialog ref={dialogRef} className={`${styles.modal} polaroid`} enable-xr>
+              <button className={`${styles.closeBtn} polaroid`} onClick={closeModal}>
                 X
               </button>
               {activeImage && <img src={activeImage} alt="Selected" />}
