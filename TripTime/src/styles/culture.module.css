@@ -92,6 +92,7 @@ article {
   color: #013d5a;
   margin-bottom: 5%;
   text-align: left;
+  width: 100%;
 }
 
 .address:active {
@@ -169,9 +170,11 @@ span {
 }
 
 li {
+  color: #013d5a;
   font-weight: normal;
   font-family: var(--font-montserrat);
   margin: 2%;
+  margin-bottom: 5%;
 }
 
 .notes p {

@@ -27,7 +27,7 @@ function App() {
         {cards.map((card, i) => (
           <Link
             key={i}
-            to={`/destination/${card.slug}`}
+            to={`/korea/${card.slug}`}
             className={styles.card}
           >
             <img
