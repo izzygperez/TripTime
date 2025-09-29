@@ -9,11 +9,11 @@ export default function CulturePage() {
   const { country } = useParams<{ country: string }>();
   const navigate = useNavigate();
 
-  // normalize key
+  // Parses data.ts to use correct content to dynamically show on page
   const normalizedCountry = (country ?? "").toLowerCase();
   const sectionData = TRIP_DATA[normalizedCountry]?.activities;
 
-  // no data found
+  // Error message for parsing data.ts
   if (!sectionData) return <p>No data found for {country}</p>;
 
   const dialogRef = useRef<HTMLDialogElement | null>(null);
@@ -30,6 +30,7 @@ export default function CulturePage() {
     setActiveImage(null);
   }
 
+  // Set default country to South Korea if no country is selected
   const currentCountry = country ?? "korea";
 
   // Routes dropdown options to corresponding country's categories
@@ -90,6 +91,7 @@ export default function CulturePage() {
           );
         })}
         </section>
+        
         <section className={styles.imageFeed}>
           <div className={styles.imgGrid}>
             {/* simple modal */}
@@ -108,6 +110,7 @@ export default function CulturePage() {
             ))}
           </div>
         </section>
+
         <section className={`${styles.notes} info`} enable-xr>
           <h2>Notes</h2>
           {activePlace ? (
