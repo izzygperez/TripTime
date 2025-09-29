@@ -22,7 +22,9 @@ It provides interactive, immersive travel guides that let you explore destinatio
 Instead of endlessly scrolling through blogs or TikTok, TripTime offers a spatial, tactile way to explore trending travel destinations. 
 
 Our first stop: Seoul, South Korea
+
 Our second stop: Tokyo, Japan
+
 Our third stop: Hawaii, USA
 
 ## Core Features
@@ -31,6 +33,9 @@ Our third stop: Hawaii, USA
 - 📝 Customized notes – fun facts, first time advice, popular menu items, and more!
 
 ## Demo
+
+[![Thumbnail](/TripTime/public/images/triptime_visionpro.PNG)](https://youtu.be/rlbVBEx7PIE)
+
 <a href="https://youtu.be/rlbVBEx7PIE" target="_blank">
 
 ## Prerequisites
@@ -57,7 +62,9 @@ npm run dev
 ```
 
 4. **Run the WebSpatial app on VisionPro**
+
 The port number should match the link provided when you run the first command.
+
 ```bash
 XR_ENV=avp npm run dev
 npx webspatial-builder run --base=http://localhost:3001/
