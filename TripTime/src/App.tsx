@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./page.module.css";
 
+// Images for portal doors on home page
 import gbg_show from "./assets/korea/culture/gbg_show.jpg";
 import solsot7 from "./assets/korea/eat-drink/solsot7.jpg";
 import lf3 from "./assets/korea/activities/LanternFestival3.jpg"
@@ -16,6 +17,7 @@ import ys from "./assets/hawaii/eat-drink/ys.png";
 import kob from "./assets/hawaii/activities/kob1.jpg";
 
 function App() {
+  // Location options for dropdown and doors
   const locations = [
     {
       name: "Seoul, South Korea",
@@ -46,6 +48,7 @@ function App() {
     },
   ];
 
+  // Set default location to South Korea upon navigating to home page
   const [currentLocation, setCurrentLocation] = useState(locations[0]);
 
   return (

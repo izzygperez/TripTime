@@ -11,7 +11,9 @@ body {
   font-family: var(--font-sigmar-one);
 }
 
+/* WebSpatial styling */
 html.is-spatial {
+  /* Remove background to isolate app sections visually */
   background-color: transparent;
   --xr-background-material: transparent;
   height: 100dvh;
@@ -37,6 +39,7 @@ html.is-spatial {
     --xr-back: 25;
   }
 
+  /* Pivot left panel toward center */
   .places {
     transform-origin: top left;
     transform: translateZ(125px) rotateY(25deg);
@@ -51,11 +54,13 @@ html.is-spatial {
     --xr-back: 35;
   }
 
+  /* Pop out image forward toward center */
   .polaroid {
     position: relative;
     --xr-back: 150;
   }
 
+  /* Pivot right panel toward center */
   .info {
     transform-origin: top right;
     transform: translateZ(100px) rotateY(-15deg);
