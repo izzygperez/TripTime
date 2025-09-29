@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { TRIP_DATA } from "../data";
-import styles from "../styles/culture.module.css";
+import styles from "./page.module.css";
 
 export default function CulturePage() {
   const [active, setActive] = useState<string | null>(null);
@@ -19,11 +19,12 @@ export default function CulturePage() {
   const dialogRef = useRef<HTMLDialogElement | null>(null);
   const [activeImage, setActiveImage] = useState<string | null>(null);
 
-  // show modal when image selected
+  // Open dialog (modal) when activeImage is set
   useEffect(() => {
     if (activeImage) dialogRef.current?.showModal();
   }, [activeImage]);
 
+  // Closes the dialog (modal) and clears activeImage
   function closeModal() {
     dialogRef.current?.close();
     setActiveImage(null);
@@ -31,12 +32,14 @@ export default function CulturePage() {
 
   const currentCountry = country ?? "korea";
 
+  // Routes dropdown options to corresponding country's categories
   const options = [
     { value: `/${currentCountry}/culture`, label: "Culture" },
     { value: `/${currentCountry}/eat-drink`, label: "Eat & Drink" },
     { value: `/${currentCountry}/activities`, label: "Activities" },
   ];
 
+  // Determines which option matches the current page
   const currentValue = options.find(opt => location.pathname === opt.value)?.value ?? options[0].value;
 
   return (
