@@ -503,12 +503,12 @@ export const TRIP_DATA = {
               address: "5 Chome-9 Azabudai Hills Garden Plaza, Minato City, Tokyo",
               gallery: [ tl1, tl2, tl3, tl4, tl5, tl6 ],
               notes: [
+                { type: "bullet", content: "Popular, immersive museum known for its colorful, futuristic digital art installations & photo ops" },
                 { type: "text", content: "Other Locations" },
                 {
                   type: "bullet",
                   content: "6 Chome-1-16 Toyosu, Koto City, Tokyo",
                 },
-                { type: "bullet", content: "Popular, immersive museum known for its colorful, futuristic digital art installations & photo ops" },
               ],
             },
             {

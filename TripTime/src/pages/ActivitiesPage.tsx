@@ -48,9 +48,7 @@ export default function CulturePage() {
         <button className={styles.home} onClick={() => navigate("/")} enable-xr>
           🏠
         </button>
-        <h1 className="name" enable-xr>
-          {country?.toUpperCase()} – ACTIVITIES
-        </h1>
+        <h1 className="name" enable-xr>Activity</h1>
         <select className={`${styles.dropbtn} dropdown`} value={currentValue} onChange={(e) => navigate(e.target.value)} enable-xr >
           {options.map((opt) => (
             <option key={opt.value} value={opt.value}>
