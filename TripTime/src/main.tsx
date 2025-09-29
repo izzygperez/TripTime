@@ -10,7 +10,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <Router>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/destination/:slug" element={<DestinationPage />} />
+        <Route path="/:country/:category" element={<DestinationPage />} />
       </Routes>
     </Router>
   </React.StrictMode>
