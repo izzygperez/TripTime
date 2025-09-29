@@ -7,12 +7,12 @@ It provides interactive, immersive travel guides that let you explore destinatio
   <table>
     <tr>
       <td align="center">
-        <img src="" width="400"/>
-        <em>Before SDK integration</em>
+        <img src="/TripTime/public/images/triptime_simulator.png" width="400"/>
+        <em>Before WebSpatial SDK integration</em>
       </td>
       <td align="center">
-        <img src="" width="400"/>
-        <em>After SDK integration</em>
+        <img src="/TripTime/public/images/triptime_visionpro.PNG" width="400"/>
+        <em>After WebSpatial SDK integration</em>
       </td>
     </tr>
   </table>
