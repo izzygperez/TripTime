@@ -82,7 +82,7 @@ export default function CulturePage() {
                       setActivePlace(place);
                     }}
                   enable-xr >
-                    <span>{place.name}</span>
+                    <span className={styles.addyName}>{place.name}</span>
                     <br />
                     <span>{place.address}</span>
                   </button>

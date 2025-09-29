@@ -11,6 +11,10 @@ import garden from "./assets/japan/culture/garden.jpg";
 import market from "./assets/japan/eat-drink/market.jpg";
 import tower from "./assets/japan/activities/tower.jpg";
 
+import mm from "./assets/hawaii/culture/mm(1).jpg";
+import ys from "./assets/hawaii/eat-drink/ys.png";
+import kob from "./assets/hawaii/activities/kob1.jpg";
+
 function App() {
   const locations = [
     {
@@ -29,6 +33,15 @@ function App() {
         { src: garden, label: "Culture", slug: "culture" },
         { src: market, label: "Eat & Drink", slug: "eat-drink" },
         { src: tower, label: "Activities", slug: "activities" },
+      ],
+    },
+    {
+      name: "Hawaii, USA",
+      key: "hawaii",
+      cards: [
+        { src: mm, label: "Culture", slug: "culture" },
+        { src: ys, label: "Eat & Drink", slug: "eat-drink" },
+        { src: kob, label: "Activities", slug: "activities" },
       ],
     },
   ];

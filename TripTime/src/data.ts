@@ -165,6 +165,75 @@ import market2 from "./assets/japan/eat-drink/market2.jpg";
 import market4 from "./assets/japan/eat-drink/market4.jpg";
 import market6 from "./assets/japan/eat-drink/market6.jpg";
 
+// Image imports for image feed on Hawaii culture page
+import gl1 from "./assets/hawaii/culture/GL.jpg";
+import gl2 from "./assets/hawaii/culture/gl(1).jpg";
+import gl3 from "./assets/hawaii/culture/GL1.jpg";
+import gl4 from "./assets/hawaii/culture/gl1.jpg";
+
+import mm1 from "./assets/hawaii/culture/MM.jpg";
+import mm2 from "./assets/hawaii/culture/MM1.jpg";
+import mm3 from "./assets/hawaii/culture/mm(1).jpg";
+import mm4 from "./assets/hawaii/culture/mm1(1).jpg";
+import mm5 from "./assets/hawaii/culture/mm2.jpg";
+
+import pcc1 from "./assets/hawaii/culture/PCC.jpg";
+import pcc2 from "./assets/hawaii/culture/pcc(1).jpg";
+import pcc3 from "./assets/hawaii/culture/PCC1.jpg";
+import pcc4 from "./assets/hawaii/culture/pcc1(1).jpg";
+import pcc5 from "./assets/hawaii/culture/pcc2.jpg";
+import pcc6 from "./assets/hawaii/culture/PCC2(1).jpg";
+import pcc7 from "./assets/hawaii/culture/pcc3.jpg";
+
+import sj1 from "./assets/hawaii/culture/SJ.jpg";
+import sj2 from "./assets/hawaii/culture/sj(1).jpg";
+import sj3 from "./assets/hawaii/culture/SJ1.jpg";
+import sj4 from "./assets/hawaii/culture/sj1(1).jpg";
+import sj5 from "./assets/hawaii/culture/SJ2.jpg";
+import sj6 from "./assets/hawaii/culture/sj2(1).jpg";
+import sj7 from "./assets/hawaii/culture/spam.jpg";
+
+// Image imports for image feed on Hawaii activities page
+import kk1 from "./assets/hawaii/activities/KK.jpg";
+import kk2 from "./assets/hawaii/activities/kk(1).jpg";
+import kk3 from "./assets/hawaii/activities/KK1.jpg";
+import kk4 from "./assets/hawaii/activities/kk1(1).jpg";
+import kk5 from "./assets/hawaii/activities/KK2.jpg";
+import kk6 from "./assets/hawaii/activities/kk2(1).jpg";
+
+import kob1 from "./assets/hawaii/activities/kob1.jpg";
+import kob2 from "./assets/hawaii/activities/kob2.jpg";
+import kob3 from "./assets/hawaii/activities/kob3.jpg";
+import kob4 from "./assets/hawaii/activities/kob4.jpg";
+import kob5 from "./assets/hawaii/activities/kob5.jpg";
+import kob6 from "./assets/hawaii/activities/kob6.jpg";
+
+import lb1 from "./assets/hawaii/activities/lb1.jpg";
+import lb2 from "./assets/hawaii/activities/lb2.jpg";
+import lb3 from "./assets/hawaii/activities/lb3.jpg";
+import lb4 from "./assets/hawaii/activities/lb4.jpg";
+
+import mlt1 from "./assets/hawaii/activities/MLT.jpg";
+import mlt2 from "./assets/hawaii/activities/MLT1.jpg";
+import mlt3 from "./assets/hawaii/activities/MLT2.jpg";
+import mlt4 from "./assets/hawaii/activities/mlt(1).jpg";
+import mlt5 from "./assets/hawaii/activities/mlt1(1).jpg";
+import mlt6 from "./assets/hawaii/activities/mlt2(1).jpg";
+
+// Image imports for image feed on Hawaii eat drink page
+import kp from "./assets/hawaii/eat-drink/kp.jpg";
+
+import t1 from "./assets/hawaii/eat-drink/t1.jpg";
+import t2 from "./assets/hawaii/eat-drink/t2.jpg";
+import t3 from "./assets/hawaii/eat-drink/t3.jpg";
+
+import ys from "./assets/hawaii/eat-drink/ys.png";
+
+import z1 from "./assets/hawaii/eat-drink/z1.jpg";
+import z2 from "./assets/hawaii/eat-drink/z2.jpg";
+import z3 from "./assets/hawaii/eat-drink/z3.jpg";
+import z4 from "./assets/hawaii/eat-drink/z4.jpg";
+
 export const TRIP_DATA = {
     korea: {
       culture: {
@@ -492,4 +561,173 @@ export const TRIP_DATA = {
         ],
       },
     },
-  };  
+    hawaii: {
+      culture: {
+        Luau: [
+          {
+            id: "pcc",
+            name: "Polynesian Cultural Center",
+            address: "55-370 Kamehameha Hwy, Laie",
+            gallery: [ pcc1, pcc2, pcc3, pcc4, pcc5, pcc6, pcc7 ],
+            notes: [
+              { type: "bullet", content: "There are different shows that happen throughout opening hours that cover Polynesian culture and history" },
+              { type: "bullet", content: "Offers multiple activity packages, so lots of options on what to do" },
+              { type: "text", content: "First Time Tips" },
+              { type: "bullet", content: "Lots of activities besides the luau in the village, so show up before dinner to explore" },
+              { type: "bullet", content: "Don’t be shy to try any of the food!!" },
+            ],
+          },
+          {
+            id: "germaine",
+            name: "Germaine's Luau",
+            address: "91-119 Olai Street, Kapolei",
+            gallery: [ gl1, gl2, gl3, gl4 ],
+            notes: [
+              { type: "bullet", content: "Lilo and Stitch Live Action movie was filmed at this luau!!" },
+              { type: "bullet", content: "Requires reservations to attend" },
+              { type: "bullet", content: "Bring friends and family to sit on a table together" },
+              { type: "bullet", content: "Be brave and dance on stage or try hula during the dinner show :)" },
+            ],
+          },
+        ],
+        Festivals: [
+          {
+            id: "merrieMonarch",
+            name: "Merrie Monarch",
+            address: "Edith Kanakaʻole Multi-Purpose Stadium at Hoʻolulu Park, Hilo",
+            gallery: [ mm1, mm2, mm3, mm4, mm5 ],
+            notes: [
+              { type: "bullet", content: "Annual Hula competition where hālaus come from all over the world to dance on stage" },
+              { type: "bullet", content: "The festival showcases various styles of hula as well as various traditional Hawaiian instruments" },
+              { type: "bullet", content: "If you can’t attend in person, they broadcast the show on TV or online on their website" },
+              { type: "bullet", content: "The event serves as a way to preserve Hawaiian culture and illustrate storytelling through dance" },
+            ],
+          },
+          {
+            id: "spam",
+            name: "Spam Jam",
+            address: "Kalakaua Ave, Honolulu",
+            gallery: [ sj1, sj2, sj3, sj4, sj5, sj6, sj7 ],
+            notes: [
+              { type: "bullet", content: "Annual cultural food festival that is all about SPAM" },
+              { type: "bullet", content: "Hawaii is the #1 consumer of SPAM in the world" },
+              { type: "bullet", content: "The event serves as a fundraiser to Hawaii Foodbank and other charities" },
+              { type: "bullet", content: "If you can’t attend the block party, some restaurants will participate in the Dine-In event that lasts a few days" },
+            ],
+          },
+        ],
+      },
+      activities: {
+        HikingTrails: [
+          {
+            id: "lighthouse",
+            name: "Makapu’u Lighthouse Trail",
+            address: "41-749 Kalanianaʻole Hwy, Waimanalo",
+            gallery: [ mlt1, mlt2, mlt3, mlt4, mlt5, mlt6 ],
+            notes: [
+              { type: "bullet", content: "This is one of the easiest trails you can find in Oahu" },
+              { type: "bullet", content: "It features a nice large road and a small tiny lighthouse at the end" },
+              { type: "text", content: "First Time Tips" },
+              { type: "bullet", content: "Bring water as the weather can get hot" },
+              { type: "bullet", content: "Best time to visit is in the morning before it gets hot or crowded" },
+            ],
+          },
+          {
+            id: "koko",
+            name: "Koko Head",
+            address: "423 Kaumakani Street, Honolulu",
+            gallery: [ kk1, kk2, kk3, kk4, kk5, kk6 ],
+            notes: [
+              { type: "bullet", content: "This is more difficult than the Lighthouse Trail due to the stairs" },
+              { type: "bullet", content: "The stairs are actually an old railway built decades ago" },
+              { type: "bullet", content: "Amazing view at the top that makes all of the exercise worth it!!" },
+              { type: "text", content: "First Time Tips" },
+              { type: "bullet", content: "Watch your step as not all steps on the railway are nice or equally formed" },
+              { type: "bullet", content: "When taking breaks, make sure to not be in the way of other hikers" },
+            ],
+          },
+        ],
+        Beaches: [
+          {
+            id: "koolina",
+            name: "Ko'olina Beach Park",
+            address: "92-100 Waipahe Pl, Kapolei",
+            gallery: [ kob1, kob2, kob3, kob4, kob5, kob6 ],
+            notes: [
+              { type: "bullet", content: "Beach located near a few hotels and lagoons" },
+              { type: "bullet", content: "Lots of mongoose skitter around these beaches" },
+              { type: "bullet", content: "You can freely walk to and enjoy the other lagoons, just be aware of hotel guests or staff" },
+              { type: "bullet", content: "Great place to take a stroll and swim" },
+            ],
+          },
+          {
+            id: "lanikai",
+            name: "Lanikai Beach",
+            address: "450 Kawailoa Rd, Kailua",
+            gallery: [ lb1, lb2, lb3, lb4 ],
+            notes: [
+              { type: "bullet", content: "Great place to read a book on the sand or do water activities" },
+              { type: "bullet", content: "There’s a nearby hiking trail where you can get a great view of this beach" },
+              { type: "text", content: "First Time Tips" },
+              { type: "bullet", content: "Go during off hours to avoid crowds or the heat" },
+              { type: "bullet", content: "Parking can be difficult to find" },
+            ],
+          },
+        ],
+      },
+      eatDrink: {
+        LocalFood: [
+          {
+            id: "taniokas",
+            name: "Tanioka's",
+            address: "94-903 Farrington Hwy, Waipahu",
+            gallery: [ t1, t2, t3 ],
+            notes: [
+              { type: "bullet", content: "Local favorite spot for poke" },
+              { type: "bullet", content: "In Hawaii, poke bowls mainly consist of rice, furikake, and seasoned fish" },
+              { type: "bullet", content: "Fish is fresh and their poke has won several awards over the years" },
+              { type: "bullet", content: "Once you try poke in HI, it never hits the same elsewhere!!" },
+            ],
+          },
+          {
+            id: "zippys",
+            name: "Zippy's",
+            address: "Multiple Locations",
+            gallery: [ z1, z2, z3, z4 ],
+            notes: [
+              { type: "bullet", content: "Actor Jason Momoa loves to eat here according to an interview with JOLLY" },
+              { type: "bullet", content: "There’s a bakery and restaurant side" },
+              { type: "bullet", content: "Serves local food and bentos" },
+              { type: "bullet", content: "The most iconic dish is chili, selling tons each month" },
+            ],
+          },
+        ],
+        BrunchSpots: [
+          {
+            id: "yogur",
+            name: "Yogur Story",
+            address: "815 Keeaumoku St, Honolulu",
+            gallery: [ ys ],
+            notes: [
+              { type: "bullet", content: "Brunch cafe located near Ala Moana Shopping Center" },
+              { type: "bullet", content: "One of their popular dishes is the ube pancakes for the bright purple color" },
+              { type: "text", content: "First Time Tips" },
+              { type: "bullet", content: "Find parking nearby and walk to the cafe as it’s difficult to find a spot in the parking lot" },
+              { type: "bullet", content: "Show up early or add yourself to the waitlist via Yelp" },
+            ],
+          },
+          {
+            id: "koa",
+            name: "Koa Pancake House",
+            address: "Multiple Locations",
+            gallery: [ kp ],
+            notes: [
+              { type: "bullet", content: "Brunch cafe that serves local favorites in big portions" },
+              { type: "bullet", content: "Popular among locals and tourists" },
+              { type: "bullet", content: "Recommend trying the macadamia nut pancakes if you don’t have an allergy to them!!" },
+            ],
+          },
+        ],
+      },
+    },
+  }
