@@ -29,6 +29,16 @@ export default function CulturePage() {
     setActiveImage(null);
   }
 
+  const currentCountry = country ?? "korea";
+
+  const options = [
+    { value: `/${currentCountry}/culture`, label: "Culture" },
+    { value: `/${currentCountry}/eat-drink`, label: "Eat & Drink" },
+    { value: `/${currentCountry}/activities`, label: "Activities" },
+  ];
+
+  const currentValue = options.find(opt => location.pathname === opt.value)?.value ?? options[0].value;
+
   return (
     <main>
       <header className={styles.header}>
@@ -38,6 +48,13 @@ export default function CulturePage() {
         <h1 className="name" enable-xr>
           {country?.toUpperCase()} – CULTURE
         </h1>
+        <select className={`${styles.dropbtn} dropdown`} value={currentValue} onChange={(e) => navigate(e.target.value)} enable-xr >
+          {options.map((opt) => (
+            <option key={opt.value} value={opt.value}>
+              {opt.label}
+            </option>
+          ))}
+        </select>
       </header>
 
       <article className={styles.article}>
