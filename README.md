@@ -1,7 +1,7 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 <h1>TripTime</h1>
 
-TripTime is a 3D spatial web app built with the [WebSpatial SDK](https://github.com/webspatial/sample-techshop) for Apple Vision Pro.
+TripTime is a 3D spatial web app built with the [WebSpatial SDK](https://github.com/webspatial/webspatial-sdk?tab=readme-ov-file) for Apple Vision Pro.
 It provides interactive, immersive travel guides that let you explore destinations in a whole new way!
 
 <div align="center" style="width: 100%; max-width: 860px;">
