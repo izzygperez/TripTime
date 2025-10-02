@@ -1,6 +1,6 @@
 export type Category = "culture" | "eat-drink" | "activities";
 
-export type Location = "korea";
+export type Location = "korea" | "japan" | "hawaii";
 
 export interface Place {
   name: string;

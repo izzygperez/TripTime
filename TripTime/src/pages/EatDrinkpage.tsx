@@ -1,16 +1,20 @@
 import { useState, useRef, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { TRIP_DATA } from "../data";
+import type { Location } from "../data";
 import styles from "./page.module.css";
 
-export default function CulturePage() {
+interface EatDrinkPageProps {
+  country: string;
+}
+
+export default function EatDrinkPage({ country }: EatDrinkPageProps) {
   const [active, setActive] = useState<string | null>(null);
-  const [activePlace, setActivePlace] = useState<typeof sectionData[string][0][0] | null>(null);
-  const { country } = useParams<{ country: string }>();
+  const [activePlace, setActivePlace] = useState<any | null>(null);
   const navigate = useNavigate();
 
   // Parses data.ts to use correct content to dynamically show on page
-  const normalizedCountry = (country ?? "").toLowerCase();
+  const normalizedCountry = (country ?? "").toLowerCase() as Location;
   const sectionData = TRIP_DATA[normalizedCountry]?.eatDrink;
 
   // Error message for parsing data.ts
@@ -101,7 +105,7 @@ export default function CulturePage() {
               </button>
               {activeImage && <img src={activeImage} alt="Selected" />}
             </dialog>
-            {activePlace?.gallery.map((imgUrl, idx) => (
+            {activePlace?.gallery.map((imgUrl: string, idx: number) => (
               <div key={idx} className={styles.pic}>
                 <button onClick={() => setActiveImage(imgUrl)}>
                   <img src={imgUrl} alt={`Gallery ${idx}`} className={styles.galleryImg} />
@@ -115,7 +119,7 @@ export default function CulturePage() {
           <h2>Notes</h2>
           {activePlace ? (
             <div>
-              {activePlace.notes.map((note, idx) =>
+              {activePlace.notes.map((note: any, idx: number) =>
                 note.type === "bullet" ? (
                   <li key={idx} style={{ marginBottom: "5%" }}>{note.content}</li>
                 ) : (
