@@ -24,8 +24,6 @@
 			<dict>
 				<key>application-identifier</key>
 				<string>X75WX7W8P7.com.triptime.app</string>
-				<key>beta-reports-active</key>
-				<true/>
 				<key>com.apple.developer.team-identifier</key>
 				<string>X75WX7W8P7</string>
 				<key>get-task-allow</key>
@@ -36,14 +34,12 @@
 			<key>profile</key>
 			<dict>
 				<key>UUID</key>
-				<string>98c8d5d4-bee8-423e-a2bb-a5f6701d4d83</string>
+				<string>5be0a518-0199-4aa9-9b50-02436022e51c</string>
 				<key>dateExpires</key>
 				<string>10/1/26</string>
 				<key>name</key>
-				<string>iOS Team Store Provisioning Profile: com.triptime.app</string>
+				<string>iOS Team Ad Hoc Provisioning Profile: com.triptime.app</string>
 			</dict>
-			<key>symbols</key>
-			<true/>
 			<key>team</key>
 			<dict>
 				<key>id</key>
