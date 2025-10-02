@@ -76,7 +76,7 @@ import clementine4 from "./assets/korea/eat-drink/clementine4.jpg";
 import clementine5 from "./assets/korea/eat-drink/clementine5.jpg";
 import clementine6 from "./assets/korea/eat-drink/clementine6.jpg";
 
-import ocheonjip1 from "./assets/korea/eat-drink/Ocheonjip.jpg";
+//import ocheonjip1 from "./assets/korea/eat-drink/Ocheonjip.jpg";
 import ocheonjip2 from "./assets/korea/eat-drink/Ocheonjip2.jpg";
 import ocheonjip3 from "./assets/korea/eat-drink/Ocheonjip4.jpg";
 import ocheonjip4 from "./assets/korea/eat-drink/ocheonjip3.jpeg";
@@ -169,7 +169,7 @@ import market6 from "./assets/japan/eat-drink/market6.jpg";
 import gl1 from "./assets/hawaii/culture/GL.jpg";
 import gl2 from "./assets/hawaii/culture/gl(1).jpg";
 import gl3 from "./assets/hawaii/culture/GL1.jpg";
-import gl4 from "./assets/hawaii/culture/gl1.jpg";
+import gl4 from "./assets/hawaii/culture/gl1.png";
 
 import mm1 from "./assets/hawaii/culture/MM.jpg";
 import mm2 from "./assets/hawaii/culture/MM1.jpg";
@@ -398,7 +398,7 @@ export const TRIP_DATA = {
             id: "ocheonjip",
             name: "Ocheonjip",
             address: "128-3 Ikeon-dong Jogno-gu, Seoul",
-            gallery: [ ocheonjip1, ocheonjip2, ocheonjip3, ocheonjip4, ocheonjip5, ocheonjip6 ],
+            gallery: [ ocheonjip2, ocheonjip3, ocheonjip4, ocheonjip5, ocheonjip6 ],
             notes: [
               { type: "text", content: "Popular Menu Itmes" },
               { type: "bullet", content: "Black Angus Almoxim Sukiyaki: Traditional sukiyaki with sweet soy sauce base plus fresh vegetable and meat" },
