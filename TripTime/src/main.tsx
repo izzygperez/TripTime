@@ -10,6 +10,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <Router>
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/webspatial/avp" element={<App />} />
         <Route path="/:country/:category" element={<DestinationPage />} />
       </Routes>
     </Router>

@@ -1,7 +1,7 @@
 {
     "name": "TripTime",
     "short_name": "TripTime",
-    "start_url": "/webspatial/avp",
+    "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#013d5a",
