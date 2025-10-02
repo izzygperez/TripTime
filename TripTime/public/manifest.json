@@ -1,0 +1,19 @@
+{
+    "name": "TripTime",
+    "short_name": "TripTime",
+    "start_url": "/webspatial/avp",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#013d5a",
+    "orientation": "any",
+    "id": "com.triptime.app",
+    "icons": [
+      {
+        "src": "/icon1.png",
+        "sizes": "1024x1024",
+        "type": "image/png",
+        "purpose": "any maskable"
+      }
+    ]
+  }
+  

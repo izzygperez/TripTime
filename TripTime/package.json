@@ -23,6 +23,7 @@
     "@eslint/js": "^9.25.0",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-basic-ssl": "^2.1.0",
     "@vitejs/plugin-react": "^4.4.1",
     "@webspatial/builder": "^1.0.3",
     "@webspatial/platform-visionos": "^1.0.3",
@@ -33,7 +34,7 @@
     "globals": "^16.0.0",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.30.1",
-    "vite": "^6.3.5",
+    "vite": "^6.3.6",
     "vite-plugin-html": "^3.2.2"
   }
 }
