@@ -70,7 +70,6 @@ import cheongsudang5 from "./assets/korea/eat-drink/cheongsudang5.jpg";
 import cheongsudang6 from "./assets/korea/eat-drink/cheongsudang3.png";
 
 import clementine1 from "./assets/korea/eat-drink/Clementine (1).jpg";
-import clementine2 from "./assets/korea/eat-drink/Clementine2.jpg";
 import clementine3 from "./assets/korea/eat-drink/clementine.jpeg";
 import clementine4 from "./assets/korea/eat-drink/clementine4.jpg";
 import clementine5 from "./assets/korea/eat-drink/clementine5.jpg";
@@ -384,7 +383,7 @@ export const TRIP_DATA = {
             id: "clementine",
             name: "Clementine",
             address: "685-490 Seongsu-dong, Seoul",
-            gallery: [ clementine1, clementine2, clementine3, clementine4, clementine5, clementine6 ],
+            gallery: [ clementine1, clementine3, clementine4, clementine5, clementine6 ],
             notes: [
               { type: "text", content: "Popular Menu Items" },
               { type: "bullet", content: "Earl Grey Lemon Tart" },
