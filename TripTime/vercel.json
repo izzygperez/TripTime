@@ -1,0 +1,14 @@
+{
+    "rewrites": [
+      {
+        "source": "/(.*)",
+        "destination": "/index.html"
+      }
+    ],
+    "ignoreRoutes": [
+      "/assets/(.*)",
+      "/favicon.ico",
+      "/manifest.json",
+      "/robots.txt"
+    ]
+  }
