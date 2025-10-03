@@ -6,6 +6,7 @@ import basicSsl from "@vitejs/plugin-basic-ssl";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/",
   plugins: [
     react({
       jsxImportSource: '@webspatial/react-sdk'
@@ -22,4 +23,7 @@ export default defineConfig({
       },
     }),
   ],
+  define: {
+    __XR_ENV_BASE__: JSON.stringify(process.env.VITE_BASE || "/"),
+  },
 });
