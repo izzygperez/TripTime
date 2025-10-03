@@ -6,7 +6,6 @@
     "background_color": "#ffffff",
     "theme_color": "#013d5a",
     "orientation": "any",
-    "id": "com.triptime.app",
     "icons": [
       {
         "src": "/icon1.png",

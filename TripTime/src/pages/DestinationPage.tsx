@@ -8,7 +8,7 @@ export default function DestinationPage() {
   const { country, category } = useParams();
   
   // Error message if there is no country or category to be found in URL
-  if (!country || !category) return <p>DEST not found</p>;
+  if (!country || !category) return <p>Dest not found</p>;
 
   // Content and Page routing based on what's found in URL params
   if (category === "culture") return <CulturePage country={country} />;
