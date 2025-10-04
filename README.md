@@ -73,3 +73,29 @@ npx webspatial-builder run --base=http://localhost:3001/
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## FAQ
+
+1. **How do I navigate between locations?**
+
+Go to the homepage and use the pink drop down button to choose which location to view.
+
+2. **How do I change which category I'm viewing?**
+
+You can choose a category either from the homepage or from the pink drop down button within each category page.
+
+3. **The app isn’t responding. What should I do?**
+
+Try closing and reopening the app. If the issue persists, restart your device.
+
+4. **Do I need Vision Pro to use the app?**
+
+Yes, TripTime is designed for VisionOS devices such as Apple Vision Pro.
+
+## Contact Us
+
+If you’re experiencing any issues not listed above, please reach out via this form: https://forms.gle/SjwiXrh3RWCMy2qG8
+
+Or if you would like to report an issue, you can open a GitHub issue here: https://github.com/izzygperez/TripTime/issues
+
+Our team will get back to you as soon as we can!!
