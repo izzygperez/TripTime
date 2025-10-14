@@ -74,6 +74,17 @@ npx webspatial-builder run --base=http://localhost:3001/
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## Credits
+
+Created by Riana Santos, Isabella Perez, and Irene Chen
+
+Riana (Software Engineer, Designer, Team Lead): Led project development from concept to deployment. Figma UI design, frontend layouts and navigation implementation, refactored code for modularity, and WebSpatial SDK integration. Hosting and deployment set up, asset collection, and coordinated with ambassadors and teammates to ensure app stability and launch success.
+
+Izzy Perez (Software Engineer): full stack, backend set up, WebSpatial SDK integration for Spatial Scene, all of home page functionality and second pages functionality, and app logo design
+
+Irene Chen (Software Engineer): implemented dynamic pages rendering and location-based image galleries, interactive image modal when image is clicked, and asset collection
+
+
 ## FAQ
 
 1. **How do I navigate between locations?**
